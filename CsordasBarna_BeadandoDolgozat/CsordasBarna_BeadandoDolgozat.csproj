@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3416B60-27AC-4320-93D1-E0C6966C63A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsordasBarna_BeadandoDolgozat</RootNamespace>
+    <AssemblyName>CsordasBarna_BeadandoDolgozat</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Beszerzett.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="Felhasznalo.cs" />
+    <Compile Include="FormBeszerzettTermekBevitel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBeszerzettTermekBevitel.Designer.cs">
+      <DependentUpon>FormBeszerzettTermekBevitel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBejelentkezés.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBejelentkezés.Designer.cs">
+      <DependentUpon>FormBejelentkezés.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminFelület.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminFelület.Designer.cs">
+      <DependentUpon>FormAdminFelület.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFelhasznaloFelulet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFelhasznaloFelulet.Designer.cs">
+      <DependentUpon>FormFelhasznaloFelulet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisztráció.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisztráció.Designer.cs">
+      <DependentUpon>FormRegisztráció.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRendeles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRendeles.Designer.cs">
+      <DependentUpon>FormRendeles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSajatTermekBevitel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSajatTermekBevitel.Designer.cs">
+      <DependentUpon>FormSajatTermekBevitel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kategória.cs" />
+    <Compile Include="Márka.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendeles.cs" />
+    <Compile Include="Sajat.cs" />
+    <EmbeddedResource Include="FormBejelentkezés.resx">
+      <DependentUpon>FormBejelentkezés.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminFelület.resx">
+      <DependentUpon>FormAdminFelület.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBeszerzettTermekBevitel.resx">
+      <DependentUpon>FormBeszerzettTermekBevitel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFelhasznaloFelulet.resx">
+      <DependentUpon>FormFelhasznaloFelulet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisztráció.resx">
+      <DependentUpon>FormRegisztráció.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRendeles.resx">
+      <DependentUpon>FormRendeles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSajatTermekBevitel.resx">
+      <DependentUpon>FormSajatTermekBevitel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

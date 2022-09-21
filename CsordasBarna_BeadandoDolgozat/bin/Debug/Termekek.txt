@@ -1,0 +1,9 @@
+﻿Weight Gainer;Testtömegnövelők;2500;6500;2021. 05. 18.;MyProtein
+Kreatin Monohidrát;Kreatin;500;2700;2021. 05. 20.;ScitecNutrition
+D-vitamin;Vitaminok;100;3500;2021. 05. 05.;BiotechUSA
+Whey Protein;Fehérjék;1000;6000;2021. 05. 06.
+Casein;Fehérjék;1000;6800;2021. 05. 13.
+Glutamin;Aminosavak;500;4700;2021. 05. 10.;MyProtein
+Multivitamin;Vitaminok;100;2800;2021. 05. 20.
+dSDAD;Testtömegnövelők;150;1000;2022. 09. 07.
+Creatin Monohydrate;Kreatin;500;5000;2022. 09. 17.
