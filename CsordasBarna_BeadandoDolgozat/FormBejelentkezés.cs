@@ -103,10 +103,11 @@ namespace CsordasBarna_BeadandoDolgozat
             FormAdmin frm = new FormAdmin();
             frm.ShowDialog();
 
+            this.Close();
+            FormAdmin form = new FormAdmin();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
             //this.Hide();
-            //FormAdmin form = new FormAdmin();
-            //form.FormClosed += (s, args) => this.Close();
-            //form.Show();
 
         }
 

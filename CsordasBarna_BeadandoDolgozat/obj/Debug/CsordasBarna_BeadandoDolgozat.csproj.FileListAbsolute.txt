@@ -130,3 +130,16 @@ D:\TANULÁS\IT modellezés és alkalmazásfejlesztés\Sajat_Project\GitHub\IT-Mo
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CsordasBarna_BeadandoDolgozat.exe.config
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.exe
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.pdb
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CsordasBarna_BeadandoDolgozat.exe
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CsordasBarna_BeadandoDolgozat.pdb
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.csprojResolveAssemblyReference.cache
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormBejelentkezés.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormAdmin.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormAdminFelület.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormBeszerzettTermekBevitel.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormFelhasznaloFelulet.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormRegisztráció.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormRendeles.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormSajatTermekBevitel.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.Properties.Resources.resources
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.csproj.GenerateResource.Cache
