@@ -16,6 +16,7 @@ namespace CsordasBarna_BeadandoDolgozat
     {
         List<Felhasznalo> felhasznalolista = new List<Felhasznalo>();
         
+        //comment
         //form oldalainak kerekítése (formázás)
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
