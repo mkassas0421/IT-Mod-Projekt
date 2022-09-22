@@ -51,9 +51,10 @@
             this.tbFelhasznalonev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFelhasznalonev.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbFelhasznalonev.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbFelhasznalonev.Location = new System.Drawing.Point(73, 116);
+            this.tbFelhasznalonev.Location = new System.Drawing.Point(91, 145);
+            this.tbFelhasznalonev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbFelhasznalonev.Name = "tbFelhasznalonev";
-            this.tbFelhasznalonev.Size = new System.Drawing.Size(171, 14);
+            this.tbFelhasznalonev.Size = new System.Drawing.Size(214, 18);
             this.tbFelhasznalonev.TabIndex = 4;
             this.tbFelhasznalonev.TabStop = false;
             this.tbFelhasznalonev.Text = "Felhasználónév";
@@ -68,9 +69,10 @@
             this.tbJelszo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbJelszo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tbJelszo.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbJelszo.Location = new System.Drawing.Point(73, 167);
+            this.tbJelszo.Location = new System.Drawing.Point(91, 196);
+            this.tbJelszo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbJelszo.Name = "tbJelszo";
-            this.tbJelszo.Size = new System.Drawing.Size(171, 14);
+            this.tbJelszo.Size = new System.Drawing.Size(214, 18);
             this.tbJelszo.TabIndex = 5;
             this.tbJelszo.TabStop = false;
             this.tbJelszo.Text = "Jelszó";
@@ -87,9 +89,10 @@
             this.btnBejelentkezes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBejelentkezes.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBejelentkezes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBejelentkezes.Location = new System.Drawing.Point(46, 242);
+            this.btnBejelentkezes.Location = new System.Drawing.Point(60, 259);
+            this.btnBejelentkezes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBejelentkezes.Name = "btnBejelentkezes";
-            this.btnBejelentkezes.Size = new System.Drawing.Size(204, 36);
+            this.btnBejelentkezes.Size = new System.Drawing.Size(255, 45);
             this.btnBejelentkezes.TabIndex = 6;
             this.btnBejelentkezes.TabStop = false;
             this.btnBejelentkezes.Text = "Bejelentkezés";
@@ -100,9 +103,10 @@
             // 
             this.lbAdmin.AutoSize = true;
             this.lbAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.lbAdmin.Location = new System.Drawing.Point(126, 344);
+            this.lbAdmin.Location = new System.Drawing.Point(157, 401);
+            this.lbAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAdmin.Name = "lbAdmin";
-            this.lbAdmin.Size = new System.Drawing.Size(36, 13);
+            this.lbAdmin.Size = new System.Drawing.Size(47, 17);
             this.lbAdmin.TabIndex = 8;
             this.lbAdmin.Text = "Admin";
             this.lbAdmin.Click += new System.EventHandler(this.lbAdmin_Click);
@@ -110,10 +114,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(110, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 22);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -123,19 +127,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.ForeColor = System.Drawing.Color.Yellow;
-            this.panel1.Location = new System.Drawing.Point(48, 134);
+            this.panel1.Location = new System.Drawing.Point(60, 168);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1);
+            this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(48, 185);
+            this.panel2.Location = new System.Drawing.Point(60, 219);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 1);
+            this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 11;
             // 
             // btnRegisztracio
@@ -144,10 +148,10 @@
             this.btnRegisztracio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisztracio.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRegisztracio.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRegisztracio.Location = new System.Drawing.Point(48, 283);
+            this.btnRegisztracio.Location = new System.Drawing.Point(62, 310);
             this.btnRegisztracio.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisztracio.Name = "btnRegisztracio";
-            this.btnRegisztracio.Size = new System.Drawing.Size(200, 36);
+            this.btnRegisztracio.Size = new System.Drawing.Size(250, 45);
             this.btnRegisztracio.TabIndex = 14;
             this.btnRegisztracio.TabStop = false;
             this.btnRegisztracio.Text = "Regisztrálok";
@@ -160,36 +164,38 @@
             this.lblX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.lblX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblX.ForeColor = System.Drawing.Color.White;
-            this.lblX.Location = new System.Drawing.Point(270, 7);
+            this.lblX.Location = new System.Drawing.Point(326, 11);
             this.lblX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(17, 17);
+            this.lblX.Size = new System.Drawing.Size(20, 20);
             this.lblX.TabIndex = 15;
             this.lblX.Text = "X";
             this.lblX.Click += new System.EventHandler(this.lblX_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(47, 106);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 132);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(47, 157);
+            this.pictureBox3.Location = new System.Drawing.Point(59, 184);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox3.Size = new System.Drawing.Size(31, 31);
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
             // FormBejelentkezés
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(295, 397);
+            this.ClientSize = new System.Drawing.Size(361, 444);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblX);
@@ -202,6 +208,7 @@
             this.Controls.Add(this.tbJelszo);
             this.Controls.Add(this.tbFelhasznalonev);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBejelentkezés";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bejelentkezés";

@@ -33,8 +33,12 @@ namespace CsordasBarna_BeadandoDolgozat
             
 
             //form oldalainak kerekítése (formázás)
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            pnlNav.Height = btnKezdolap.Height;
+            pnlNav.Top = btnKezdolap.Top;
+            pnlNav.Left = btnKezdolap.Left;
+            btnKezdolap.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void btnKilép_Click(object sender, EventArgs e)
@@ -77,7 +81,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void FormAdminFelület_Load(object sender, EventArgs e)
         {
-       
+            
             try
             {
                 StreamReader rd = new StreamReader("Termekek.txt", Encoding.UTF8);
@@ -204,6 +208,75 @@ namespace CsordasBarna_BeadandoDolgozat
             radioButton3.Checked = true;
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
             frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+            pnlNav.Height = button1.Height;
+            pnlNav.Top = button1.Top;
+            //pnlNav.Left = button1.Left;
+            button1.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void btnKezdolap_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnKezdolap.Height;
+            pnlNav.Top = btnKezdolap.Top;
+            pnlNav.Left = btnKezdolap.Left;
+            btnKezdolap.BackColor = Color.FromArgb(46,51,73);
+        }
+
+        private void btnKezdolap_Leave(object sender, EventArgs e)
+        {
+            btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+            pnlNav.Height = button2.Height;
+            pnlNav.Top = button2.Top;
+            //pnlNav.Left = button1.Left;
+            button2.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void button2_Leave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button1_Leave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+            pnlNav.Height = button3.Height;
+            pnlNav.Top = button3.Top;
+            //pnlNav.Left = button1.Left;
+            button3.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+            pnlNav.Height = button4.Height;
+            pnlNav.Top = button4.Top;
+            //pnlNav.Left = button1.Left;
+            button4.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void button3_Leave(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button4_Leave(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.FromArgb(24, 30, 54);
         }
     }           
         }
