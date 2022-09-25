@@ -53,6 +53,7 @@ namespace CsordasBarna_BeadandoDolgozat
             }
 
             base.WndProc(ref m);
+
         }
 
         private void btnKilép_Click(object sender, EventArgs e)
