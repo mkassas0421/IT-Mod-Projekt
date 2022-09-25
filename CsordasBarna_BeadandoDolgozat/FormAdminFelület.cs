@@ -15,6 +15,7 @@ namespace CsordasBarna_BeadandoDolgozat
     public partial class FormAdminFelület : Form
     {
         List<Sajat> lista = new List<Sajat>();
+        private bool isCollapsed;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -39,6 +40,19 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
             btnKezdolap.BackColor = Color.FromArgb(46, 51, 73);
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
         }
 
         private void btnKilép_Click(object sender, EventArgs e)
@@ -213,10 +227,14 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button1_Click(object sender, EventArgs e)
         {
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
-            pnlNav.Height = button1.Height;
-            pnlNav.Top = button1.Top;
+            //pnlNav.Height = button1.Height;
+            //pnlNav.Top = button1.Top;
             //pnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
+            pictureBox7.BackColor = Color.FromArgb(46, 51, 73);
+
+            //timer1.Start();
+            drop_down(sender,e);
         }
 
         private void btnKezdolap_Click(object sender, EventArgs e)
@@ -239,16 +257,19 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Top = button2.Top;
             //pnlNav.Left = button1.Left;
             button2.BackColor = Color.FromArgb(46, 51, 73);
+            pictureBox4.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void button2_Leave(object sender, EventArgs e)
         {
             button2.BackColor = Color.FromArgb(24, 30, 54);
+            pictureBox4.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void button1_Leave(object sender, EventArgs e)
         {
             button1.BackColor = Color.FromArgb(24, 30, 54);
+            pictureBox7.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -258,6 +279,7 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Top = button3.Top;
             //pnlNav.Left = button1.Left;
             button3.BackColor = Color.FromArgb(46, 51, 73);
+            pictureBox5.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -272,13 +294,67 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button3_Leave(object sender, EventArgs e)
         {
             button3.BackColor = Color.FromArgb(24, 30, 54);
+            pictureBox5.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void button4_Leave(object sender, EventArgs e)
         {
             button4.BackColor = Color.FromArgb(24, 30, 54);
         }
-    }           
+
+        /*
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                panel5.Height = panel5.MaximumSize.Height;
+                if (panel5.Size == panel5.MaximumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panel5.Height = panel5.MinimumSize.Height;
+                if (panel5.Size == panel5.MinimumSize)
+                {
+                    timer1.Stop();
+                    isCollapsed = true;
+                }
+            }
         }
+        */
+        private void drop_down(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                panel5.Height = panel5.MaximumSize.Height;
+                if (panel5.Size == panel5.MaximumSize)
+                {
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                panel5.Height = panel5.MinimumSize.Height;
+                if (panel5.Size == panel5.MinimumSize)
+                {
+                    isCollapsed = true;
+                }
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
     
 

@@ -47,6 +47,9 @@ namespace CsordasBarna_BeadandoDolgozat
                 tbAdmin.Clear();
                 FormAdminFelület frm = new FormAdminFelület();
                 frm.ShowDialog();
+                this.Close();
+                
+                
             }
             else
             {
@@ -54,6 +57,7 @@ namespace CsordasBarna_BeadandoDolgozat
                 tbAdminJelszo.Clear();
                 tbAdmin.Clear();
             }
+
         }
 
         private void btnMégsem_Click(object sender, EventArgs e)
