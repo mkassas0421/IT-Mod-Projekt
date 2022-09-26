@@ -41,7 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnlNav = new System.Windows.Forms.Panel();
@@ -52,19 +55,20 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnUjtermek = new System.Windows.Forms.Button();
+            this.btnUjidegentermek = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // lvOutput
@@ -75,9 +79,9 @@
             this.lvOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.lvOutput.ForeColor = System.Drawing.Color.White;
             this.lvOutput.HideSelection = false;
-            this.lvOutput.Location = new System.Drawing.Point(341, 43);
+            this.lvOutput.Location = new System.Drawing.Point(192, 12);
             this.lvOutput.Name = "lvOutput";
-            this.lvOutput.Size = new System.Drawing.Size(767, 487);
+            this.lvOutput.Size = new System.Drawing.Size(906, 518);
             this.lvOutput.TabIndex = 1;
             this.lvOutput.UseCompatibleStateImageBehavior = false;
             this.lvOutput.View = System.Windows.Forms.View.List;
@@ -98,7 +102,7 @@
             this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(340, 542);
+            this.radioButton1.Location = new System.Drawing.Point(488, 542);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(94, 17);
             this.radioButton1.TabIndex = 3;
@@ -111,7 +115,7 @@
             // 
             this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(440, 542);
+            this.radioButton2.Location = new System.Drawing.Point(588, 542);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(84, 17);
             this.radioButton2.TabIndex = 4;
@@ -123,7 +127,7 @@
             // 
             this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(530, 542);
+            this.radioButton3.Location = new System.Drawing.Point(678, 542);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(109, 17);
             this.radioButton3.TabIndex = 5;
@@ -199,6 +203,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel3.Controls.Add(this.btnUjidegentermek);
+            this.panel3.Controls.Add(this.btnUjtermek);
+            this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.pictureBox5);
@@ -215,6 +222,27 @@
             this.panel3.TabIndex = 11;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(134, 152);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(132, 282);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 20;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox7);
@@ -228,15 +256,25 @@
             this.panel5.Size = new System.Drawing.Size(180, 35);
             this.panel5.TabIndex = 19;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(130, 6);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
+            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(3, 0);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 36);
+            this.button1.Size = new System.Drawing.Size(186, 42);
             this.button1.TabIndex = 14;
             this.button1.Text = "Terméklista";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,9 +286,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(134, 240);
+            this.pictureBox5.Location = new System.Drawing.Point(132, 239);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(25, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             // 
@@ -287,14 +326,13 @@
             this.btnKezdolap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKezdolap.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnKezdolap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnKezdolap.Image = ((System.Drawing.Image)(resources.GetObject("btnKezdolap.Image")));
             this.btnKezdolap.Location = new System.Drawing.Point(0, 144);
             this.btnKezdolap.Name = "btnKezdolap";
             this.btnKezdolap.Size = new System.Drawing.Size(186, 42);
             this.btnKezdolap.TabIndex = 13;
-            this.btnKezdolap.Text = "Kezdőlap";
-            this.btnKezdolap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKezdolap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKezdolap.Text = " Kezdőlap";
+            this.btnKezdolap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKezdolap.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKezdolap.UseVisualStyleBackColor = true;
             this.btnKezdolap.Click += new System.EventHandler(this.btnKezdolap_Click);
             this.btnKezdolap.Leave += new System.EventHandler(this.btnKezdolap_Leave);
@@ -305,11 +343,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button3.Location = new System.Drawing.Point(3, 234);
+            this.button3.Location = new System.Drawing.Point(0, 276);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 42);
+            this.button3.Size = new System.Drawing.Size(186, 42);
             this.button3.TabIndex = 16;
-            this.button3.Text = "Kapcsolatok";
+            this.button3.Text = " Kapcsolatok";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button3.UseVisualStyleBackColor = true;
@@ -322,11 +360,11 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(3, 285);
+            this.button2.Location = new System.Drawing.Point(0, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 42);
             this.button2.TabIndex = 15;
-            this.button2.Text = "Naptár  ";
+            this.button2.Text = " Naptár  ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = true;
@@ -364,23 +402,37 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Felhasználónév";
             // 
-            // pictureBox4
+            // btnUjtermek
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(133, 292);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
+            this.btnUjtermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnUjtermek.FlatAppearance.BorderSize = 0;
+            this.btnUjtermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUjtermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUjtermek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnUjtermek.Location = new System.Drawing.Point(0, 318);
+            this.btnUjtermek.Name = "btnUjtermek";
+            this.btnUjtermek.Size = new System.Drawing.Size(186, 42);
+            this.btnUjtermek.TabIndex = 22;
+            this.btnUjtermek.Text = "Új termék felvitel";
+            this.btnUjtermek.UseVisualStyleBackColor = false;
+            this.btnUjtermek.Visible = false;
+            this.btnUjtermek.Click += new System.EventHandler(this.btnUjtermek_Click);
             // 
-            // pictureBox7
+            // btnUjidegentermek
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(131, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 26);
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
+            this.btnUjidegentermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnUjidegentermek.FlatAppearance.BorderSize = 0;
+            this.btnUjidegentermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUjidegentermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUjidegentermek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnUjidegentermek.Location = new System.Drawing.Point(0, 360);
+            this.btnUjidegentermek.Name = "btnUjidegentermek";
+            this.btnUjidegentermek.Size = new System.Drawing.Size(186, 42);
+            this.btnUjidegentermek.TabIndex = 23;
+            this.btnUjidegentermek.Text = "Új beszerzett termék";
+            this.btnUjidegentermek.UseVisualStyleBackColor = false;
+            this.btnUjidegentermek.Visible = false;
+            this.btnUjidegentermek.Click += new System.EventHandler(this.btnUjidegentermek_Click);
             // 
             // FormAdminFelület
             // 
@@ -406,13 +458,14 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,5 +497,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnUjtermek;
+        private System.Windows.Forms.Button btnUjidegentermek;
     }
 }
