@@ -16,6 +16,8 @@ namespace CsordasBarna_BeadandoDolgozat
     {
         List<Sajat> lista = new List<Sajat>();
         private bool isCollapsed;
+        private bool btnUjtermClicked=false;
+        private bool btnUjidegenClicked=false;
         int szamlalo = 1; //a lenyíló menüt kattintásait számlálja, hogy minden második kattintásra összecsukódjon a lenyiló menü a terméklista gombbnál
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -188,8 +190,6 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(36, 39, 38);
-            panel2.BackColor = Color.FromArgb(30, 40, 49);
             radioButton2.Checked = true;
             FormSajatTermekBevitel fsajat = new FormSajatTermekBevitel();
             fsajat.ShowDialog();
@@ -202,8 +202,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void label1_Click(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(36,39,40);
-            panel2.BackColor = Color.FromArgb(30, 40, 49);
+
             radioButton2.Checked = true;
             FormSajatTermekBevitel fsajat = new FormSajatTermekBevitel();
             fsajat.ShowDialog();
@@ -211,8 +210,6 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(30, 40, 49);
-            panel2.BackColor = Color.FromArgb(36, 39, 40);
             radioButton3.Checked = true;
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
             frm.ShowDialog();
@@ -220,8 +217,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(30, 40, 49);
-            panel2.BackColor = Color.FromArgb(36, 39, 40);
+
             radioButton3.Checked = true;
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
             frm.ShowDialog();
@@ -235,7 +231,7 @@ namespace CsordasBarna_BeadandoDolgozat
             //pnlNav.Top = button1.Top;
             //pnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
-            pictureBox7.BackColor = Color.FromArgb(46, 51, 73);
+
 
             //2 új button lenyitása a terméklista gomb alá
             btnUjtermek.Visible = true;
@@ -299,18 +295,24 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             szamlalo = 1;
             button1.BackColor = Color.FromArgb(24, 30, 54);
-            pictureBox7.BackColor = Color.FromArgb(24, 30, 54);
+
 
             //leugró 2 button összecsukása
             /*ide kell egy feltételes elágazás, hogy ez csak akkor következzen be hogyha nem a btnUjtermek_Click vagy nem a btnUjidegentermek_Click-re megyünk
             mert különben nem lehet megnyitni az adatfelvivős formokat*/
+            if (btnUjidegenClicked || btnUjtermClicked)
+            {
                 button2.Location = new Point(0, 234);
                 button3.Location = new Point(0, 276);
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
                 pictureBox4.Location = new Point(132, 239);
                 pictureBox5.Location = new Point(132, 282);
-            
+            }
+            btnUjidegenClicked = false;
+            btnUjtermClicked = false;
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -400,13 +402,15 @@ namespace CsordasBarna_BeadandoDolgozat
         private void btnUjtermek_Click(object sender, EventArgs e)
         {
             FormSajatTermekBevitel frm = new FormSajatTermekBevitel();
-            frm.ShowDialog();
+            frm.Show();
+            btnUjtermClicked = true;
         }
 
         private void btnUjidegentermek_Click(object sender, EventArgs e)
         {
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
-            frm.ShowDialog();
+            btnUjidegenClicked = true;
+            frm.Show();
         }
     }
 }
