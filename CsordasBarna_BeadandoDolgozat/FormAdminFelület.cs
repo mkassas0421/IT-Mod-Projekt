@@ -16,6 +16,7 @@ namespace CsordasBarna_BeadandoDolgozat
     {
         List<Sajat> lista = new List<Sajat>();
         private bool isCollapsed;
+        int szamlalo = 1; //a lenyíló menüt kattintásait számlálja, hogy minden második kattintásra összecsukódjon a lenyiló menü a terméklista gombbnál
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -40,6 +41,7 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
             btnKezdolap.BackColor = Color.FromArgb(46, 51, 73);
+            pictureBox6.BackColor= Color.FromArgb(46, 51, 73);
         }
         protected override void WndProc(ref Message m)
         {
@@ -66,7 +68,7 @@ namespace CsordasBarna_BeadandoDolgozat
         private void sajátTermékekToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSajatTermekBevitel frm = new FormSajatTermekBevitel(lista);
-            if (frm.ShowDialog()==DialogResult.OK)
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 Sajat t = lista[lista.Count - 1];
                 //lvOutput.Items.Add(t.Térköz());
@@ -74,7 +76,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
                 StreamWriter wr = new StreamWriter("Termekek.txt", true, Encoding.UTF8);
                 wr.WriteLine(t.FájlMentes());
-                wr.Close();                                             
+                wr.Close();
             }
         }
 
@@ -226,6 +228,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button1_Click(object sender, EventArgs e)
         {
+            szamlalo++;
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             //pnlNav.Height = button1.Height;
             //pnlNav.Top = button1.Top;
@@ -233,12 +236,35 @@ namespace CsordasBarna_BeadandoDolgozat
             button1.BackColor = Color.FromArgb(46, 51, 73);
             pictureBox7.BackColor = Color.FromArgb(46, 51, 73);
 
+            //2 új button lenyitása a terméklista gomb alá
+            btnUjtermek.Visible = true;
+            btnUjidegentermek.Visible = true;
+            btnUjtermek.Location = new Point(0, 234);
+            btnUjidegentermek.Location = new Point(0, 276);
+            button2.Location = new Point(0, 318);
+            button3.Location = new Point(0, 360);
+            pictureBox4.Location = new Point(132, 326);
+            pictureBox5.Location = new Point(132, 368);
+
+
+            if (szamlalo % 2 == 1) {
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                button2.Location = new Point(0, 234);
+                button3.Location = new Point(0, 276);
+                pictureBox4.Location = new Point(132, 239);
+                pictureBox5.Location = new Point(132, 282);
+            }
+            
+
             //timer1.Start();
-            drop_down(sender,e);
+            //drop_down(sender,e);
         }
 
         private void btnKezdolap_Click(object sender, EventArgs e)
         {
+            pictureBox6.BackColor = Color.Transparent;
+
             pnlNav.Height = btnKezdolap.Height;
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
@@ -248,10 +274,12 @@ namespace CsordasBarna_BeadandoDolgozat
         private void btnKezdolap_Leave(object sender, EventArgs e)
         {
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
+            pictureBox6.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button2.Height;
             pnlNav.Top = button2.Top;
@@ -268,12 +296,25 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button1_Leave(object sender, EventArgs e)
         {
+            szamlalo = 1;
             button1.BackColor = Color.FromArgb(24, 30, 54);
             pictureBox7.BackColor = Color.FromArgb(24, 30, 54);
+
+            //leugró 2 button összecsukása
+            /*ide kell egy feltételes elágazás, hogy ez csak akkor következzen be hogyha nem a btnUjtermek_Click vagy nem a btnUjidegentermek_Click-re megyünk
+            mert különben nem lehet megnyitni az adatfelvivős formokat*/
+                button2.Location = new Point(0, 234);
+                button3.Location = new Point(0, 276);
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                pictureBox4.Location = new Point(132, 239);
+                pictureBox5.Location = new Point(132, 282);
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button3.Height;
             pnlNav.Top = button3.Top;
@@ -325,25 +366,25 @@ namespace CsordasBarna_BeadandoDolgozat
             }
         }
         */
-        private void drop_down(object sender, EventArgs e)
-        {
-            if (isCollapsed)
-            {
-                panel5.Height = panel5.MaximumSize.Height;
-                if (panel5.Size == panel5.MaximumSize)
-                {
-                    isCollapsed = false;
-                }
-            }
-            else
-            {
-                panel5.Height = panel5.MinimumSize.Height;
-                if (panel5.Size == panel5.MinimumSize)
-                {
-                    isCollapsed = true;
-                }
-            }
-        }
+        //private void drop_down(object sender, EventArgs e)
+        //{
+        //    if (isCollapsed)
+        //    {
+        //        panel5.Height = panel5.MaximumSize.Height;
+        //        if (panel5.Size == panel5.MaximumSize)
+        //        {
+        //            isCollapsed = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        panel5.Height = panel5.MinimumSize.Height;
+        //        if (panel5.Size == panel5.MinimumSize)
+        //        {
+        //            isCollapsed = true;
+        //        }
+        //    }
+        //}
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -353,6 +394,18 @@ namespace CsordasBarna_BeadandoDolgozat
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUjtermek_Click(object sender, EventArgs e)
+        {
+            FormSajatTermekBevitel frm = new FormSajatTermekBevitel();
+            frm.ShowDialog();
+        }
+
+        private void btnUjidegentermek_Click(object sender, EventArgs e)
+        {
+            FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
+            frm.ShowDialog();
         }
     }
 }
