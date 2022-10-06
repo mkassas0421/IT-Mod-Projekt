@@ -33,7 +33,7 @@ namespace CsordasBarna_BeadandoDolgozat
         }
 
         //METÓDUSOK
-        protected override string Mentes()
+        public override string Mentes()
         {
             return this.felhasznalonev + ";" + this.lekerdezesSzam;
         }

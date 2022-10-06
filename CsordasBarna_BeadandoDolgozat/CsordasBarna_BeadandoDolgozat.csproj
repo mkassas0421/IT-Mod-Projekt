@@ -76,6 +76,12 @@
     <Compile Include="FormAdminFelület.Designer.cs">
       <DependentUpon>FormAdminFelület.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRMFelelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRMFelelos.Designer.cs">
+      <DependentUpon>FormCRMFelelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFelhasznaloFelulet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="FormSajatTermekBevitel.Designer.cs">
       <DependentUpon>FormSajatTermekBevitel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTermekFelelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTermekFelelos.Designer.cs">
+      <DependentUpon>FormTermekFelelos.cs</DependentUpon>
     </Compile>
     <Compile Include="Kategória.cs" />
     <Compile Include="Kosar.cs" />

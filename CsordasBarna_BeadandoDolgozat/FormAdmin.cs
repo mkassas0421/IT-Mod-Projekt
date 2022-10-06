@@ -14,7 +14,9 @@ namespace CsordasBarna_BeadandoDolgozat
 {
     public partial class FormAdmin : Form
     {
-        List<Felhasznalo> adminlista = new List<Felhasznalo>();
+        List<Felhasznalo> adminLista = new List<Felhasznalo>();   //belépéshez felhasznalonev és jelszo : admin/admin az Admin.txt-ben tárolódik 
+        List<Felhasznalo> termekFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : termek/termek az TermekFelelos.txt-ben tárolódik
+        List<Felhasznalo> crmFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : crm/crm az CRMFelelos.txt-ben tárolódik
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -40,29 +42,69 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnBelépés_Click(object sender, EventArgs e)
         {
-            Felhasznalo admin = adminlista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
-            if (admin !=null)
+            tbAdmin.Clear();
+            tbAdminJelszo.Clear();
+            if (radiobtnAdmin.Checked) {
+                Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                if (admin != null)
+                {
+                    tbAdminJelszo.Clear();
+                    tbAdmin.Clear();
+                    FormAdminFelület frm = new FormAdminFelület();
+                    frm.ShowDialog();
+                    this.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Sikertelen belépés az admin felületre!");
+                    tbAdmin.Text = "Azonosító";
+                    tbAdminJelszo.Text = "Jelszó";
+                }
+            }
+            else if (radiobtnTermek.Checked)
             {
-                tbAdminJelszo.Clear();
-                tbAdmin.Clear();
-                FormAdminFelület frm = new FormAdminFelület();
-                frm.ShowDialog();
-                this.Close();
-                
-                
+                Felhasznalo termekFelelos = termekFelelosLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                if (termekFelelos != null)
+                {
+                    
+                    tbAdminJelszo.Clear();
+                    tbAdmin.Clear();
+                    FormTermekFelelos frm = new FormTermekFelelos();
+                    frm.ShowDialog();
+                    this.Close();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Sikertelen belépés a termékek felületére!");
+                    tbAdmin.Text = "Azonosító";
+                    tbAdminJelszo.Text = "Jelszó";
+                }
             }
             else
             {
-                MessageBox.Show("Sikertelen belépés");
-                tbAdminJelszo.Clear();
-                tbAdmin.Clear();
+                Felhasznalo crmFelelos = crmFelelosLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                if (crmFelelos != null)
+                {
+                    
+                    tbAdminJelszo.Clear();
+                    tbAdmin.Clear();
+                    FormCRMFelelos frm = new FormCRMFelelos();
+                    frm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Sikertelen belépés a CRM felületére!");
+                    tbAdmin.Text = "Azonosító";
+                    tbAdminJelszo.Text = "Jelszó";
+                }
             }
 
-        }
 
-        private void btnMégsem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -74,10 +116,33 @@ namespace CsordasBarna_BeadandoDolgozat
                 {
                     string[] s = rd.ReadLine().Split(';');
                     Felhasznalo admin = new Felhasznalo(s[0], s[1]);
-                    adminlista.Add(admin);
+                    adminLista.Add(admin);
                 }
                 rd.Close();
             }
+            if (File.Exists("TermekFelelos.txt"))
+            {
+                StreamReader rd = new StreamReader("TermekFelelos.txt", Encoding.UTF8);
+                while (!rd.EndOfStream)
+                {
+                    string[] s = rd.ReadLine().Split(';');
+                    Felhasznalo termekfelelos = new Felhasznalo(s[0], s[1]);
+                    termekFelelosLista.Add(termekfelelos);
+                }
+                rd.Close();
+            }
+            if (File.Exists("CRMFelelos.txt"))
+            {
+                StreamReader rd = new StreamReader("CRMFelelos.txt", Encoding.UTF8);
+                while (!rd.EndOfStream)
+                {
+                    string[] s = rd.ReadLine().Split(';');
+                    Felhasznalo crmfelelos = new Felhasznalo(s[0], s[1]);
+                    crmFelelosLista.Add(crmfelelos);
+                }
+                rd.Close();
+            }
+            
         }
 
         private void tbAdminNev_Click(object sender, EventArgs e)
@@ -85,7 +150,7 @@ namespace CsordasBarna_BeadandoDolgozat
             panel1.BackColor = Color.FromArgb(78, 184, 206);
             panel2.BackColor = Color.WhiteSmoke;
 
-            if (tbAdmin.Text != String.Empty && tbAdmin.Text.Equals("Admin"))
+            if (tbAdmin.Text != String.Empty && tbAdmin.Text.Equals("Azonosító"))
             {
                 tbAdmin.Clear();
             }
@@ -110,7 +175,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
             if (tbAdmin.Text == String.Empty)
             {
-                tbAdmin.Text = "Admin";
+                tbAdmin.Text = "Azonosító";
             }
         }
 
@@ -129,7 +194,7 @@ namespace CsordasBarna_BeadandoDolgozat
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblBezaras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -163,19 +228,42 @@ namespace CsordasBarna_BeadandoDolgozat
 
         }
 
-        private void radioButton1_Leave(object sender, EventArgs e)
+        private void radiobtnAdmin_Leave(object sender, EventArgs e)
         {
-            radioButton1.Checked = false;
+            radiobtnAdmin.Checked = false;
         }
 
-        private void radioButton2_Leave(object sender, EventArgs e)
+        private void radiobtnTermek_Leave(object sender, EventArgs e)
         {
-            radioButton1.Checked = false;
+            radiobtnAdmin.Checked = false;
         }
 
-        private void radioButton3_Leave(object sender, EventArgs e)
+        private void radiobtnCRM_Leave(object sender, EventArgs e)
         {
-            radioButton1.Checked = false;
+            radiobtnAdmin.Checked = false;
+        }
+
+        private void ss(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radiobtnAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radiobtnCRM.Checked == false && radiobtnTermek.Checked == false)
+                radiobtnAdmin.Checked = true;
+        }
+
+        private void radiobtnTermek_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radiobtnAdmin.Checked == false && radiobtnCRM.Checked == false)
+                radiobtnTermek.Checked = true;
+        }
+
+        private void radiobtnCRM_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radiobtnAdmin.Checked == false && radiobtnTermek.Checked == false)
+                radiobtnCRM.Checked = true;
         }
     }
 }

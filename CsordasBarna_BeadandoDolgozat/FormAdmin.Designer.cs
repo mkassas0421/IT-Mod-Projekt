@@ -31,12 +31,12 @@
             this.tbAdmin = new System.Windows.Forms.TextBox();
             this.tbAdminJelszo = new System.Windows.Forms.TextBox();
             this.btnBelépés = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBezaras = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radiobtnAdmin = new System.Windows.Forms.RadioButton();
+            this.radiobtnTermek = new System.Windows.Forms.RadioButton();
+            this.radiobtnCRM = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // tbAdmin
@@ -48,10 +48,10 @@
             this.tbAdmin.Location = new System.Drawing.Point(35, 23);
             this.tbAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.tbAdmin.Name = "tbAdmin";
-            this.tbAdmin.Size = new System.Drawing.Size(160, 14);
+            this.tbAdmin.Size = new System.Drawing.Size(160, 18);
             this.tbAdmin.TabIndex = 2;
             this.tbAdmin.TabStop = false;
-            this.tbAdmin.Text = "Admin";
+            this.tbAdmin.Text = "Azonosító";
             this.tbAdmin.Click += new System.EventHandler(this.tbAdminNev_Click);
             this.tbAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAdmin_KeyDown);
             // 
@@ -64,7 +64,7 @@
             this.tbAdminJelszo.Location = new System.Drawing.Point(35, 58);
             this.tbAdminJelszo.Margin = new System.Windows.Forms.Padding(2);
             this.tbAdminJelszo.Name = "tbAdminJelszo";
-            this.tbAdminJelszo.Size = new System.Drawing.Size(160, 14);
+            this.tbAdminJelszo.Size = new System.Drawing.Size(160, 18);
             this.tbAdminJelszo.TabIndex = 3;
             this.tbAdminJelszo.TabStop = false;
             this.tbAdminJelszo.Text = "Jelszó";
@@ -79,27 +79,27 @@
             this.btnBelépés.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBelépés.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBelépés.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnBelépés.Location = new System.Drawing.Point(35, 134);
+            this.btnBelépés.Location = new System.Drawing.Point(23, 131);
             this.btnBelépés.Margin = new System.Windows.Forms.Padding(2);
             this.btnBelépés.Name = "btnBelépés";
-            this.btnBelépés.Size = new System.Drawing.Size(191, 28);
+            this.btnBelépés.Size = new System.Drawing.Size(255, 45);
             this.btnBelépés.TabIndex = 4;
             this.btnBelépés.Text = "Belépés";
             this.btnBelépés.UseVisualStyleBackColor = false;
             this.btnBelépés.Click += new System.EventHandler(this.btnBelépés_Click);
             // 
-            // label3
+            // lblBezaras
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(219, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblBezaras.AutoSize = true;
+            this.lblBezaras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblBezaras.ForeColor = System.Drawing.Color.White;
+            this.lblBezaras.Location = new System.Drawing.Point(282, 9);
+            this.lblBezaras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBezaras.Name = "lblBezaras";
+            this.lblBezaras.Size = new System.Drawing.Size(20, 20);
+            this.lblBezaras.TabIndex = 5;
+            this.lblBezaras.Text = "X";
+            this.lblBezaras.Click += new System.EventHandler(this.lblBezaras_Click);
             // 
             // panel1
             // 
@@ -107,7 +107,7 @@
             this.panel1.Location = new System.Drawing.Point(23, 41);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 1);
+            this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -116,60 +116,62 @@
             this.panel2.Location = new System.Drawing.Point(23, 76);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 1);
+            this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 7;
             // 
-            // radioButton1
+            // radiobtnAdmin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(12, 91);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            this.radioButton1.Leave += new System.EventHandler(this.radioButton1_Leave);
+            this.radiobtnAdmin.AutoSize = true;
+            this.radiobtnAdmin.Checked = true;
+            this.radiobtnAdmin.ForeColor = System.Drawing.Color.White;
+            this.radiobtnAdmin.Location = new System.Drawing.Point(23, 91);
+            this.radiobtnAdmin.Name = "radiobtnAdmin";
+            this.radiobtnAdmin.Size = new System.Drawing.Size(68, 21);
+            this.radiobtnAdmin.TabIndex = 8;
+            this.radiobtnAdmin.TabStop = true;
+            this.radiobtnAdmin.Text = "Admin";
+            this.radiobtnAdmin.UseVisualStyleBackColor = true;
+            this.radiobtnAdmin.CheckedChanged += new System.EventHandler(this.radiobtnAdmin_CheckedChanged);
+            this.radiobtnAdmin.Leave += new System.EventHandler(this.radiobtnAdmin_Leave);
             // 
-            // radioButton2
+            // radiobtnTermek
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(72, 91);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.Text = "TermekFelelos";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.Leave += new System.EventHandler(this.radioButton2_Leave);
+            this.radiobtnTermek.AutoSize = true;
+            this.radiobtnTermek.ForeColor = System.Drawing.Color.White;
+            this.radiobtnTermek.Location = new System.Drawing.Point(109, 92);
+            this.radiobtnTermek.Name = "radiobtnTermek";
+            this.radiobtnTermek.Size = new System.Drawing.Size(92, 21);
+            this.radiobtnTermek.TabIndex = 9;
+            this.radiobtnTermek.Text = "Termekek";
+            this.radiobtnTermek.UseVisualStyleBackColor = true;
+            this.radiobtnTermek.CheckedChanged += new System.EventHandler(this.radiobtnTermek_CheckedChanged);
+            this.radiobtnTermek.Leave += new System.EventHandler(this.radiobtnTermek_Leave);
             // 
-            // radioButton3
+            // radiobtnCRM
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(172, 91);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(82, 17);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.Text = "CRMFelelos";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.Leave += new System.EventHandler(this.radioButton3_Leave);
+            this.radiobtnCRM.AutoSize = true;
+            this.radiobtnCRM.ForeColor = System.Drawing.Color.White;
+            this.radiobtnCRM.Location = new System.Drawing.Point(219, 91);
+            this.radiobtnCRM.Name = "radiobtnCRM";
+            this.radiobtnCRM.Size = new System.Drawing.Size(59, 21);
+            this.radiobtnCRM.TabIndex = 10;
+            this.radiobtnCRM.Text = "CRM";
+            this.radiobtnCRM.UseVisualStyleBackColor = true;
+            this.radiobtnCRM.CheckedChanged += new System.EventHandler(this.radiobtnCRM_CheckedChanged);
+            this.radiobtnCRM.Leave += new System.EventHandler(this.radiobtnCRM_Leave);
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(264, 184);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.ClientSize = new System.Drawing.Size(313, 192);
+            this.Controls.Add(this.radiobtnCRM);
+            this.Controls.Add(this.radiobtnTermek);
+            this.Controls.Add(this.radiobtnAdmin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblBezaras);
             this.Controls.Add(this.btnBelépés);
             this.Controls.Add(this.tbAdminJelszo);
             this.Controls.Add(this.tbAdmin);
@@ -178,7 +180,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin";
             this.Text = "23";
-            this.Load += new System.EventHandler(this.FormAdmin_Load);
+            this.Load += new System.EventHandler(this.ss);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,11 +190,11 @@
         private System.Windows.Forms.TextBox tbAdmin;
         private System.Windows.Forms.TextBox tbAdminJelszo;
         private System.Windows.Forms.Button btnBelépés;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBezaras;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radiobtnAdmin;
+        private System.Windows.Forms.RadioButton radiobtnTermek;
+        private System.Windows.Forms.RadioButton radiobtnCRM;
     }
 }

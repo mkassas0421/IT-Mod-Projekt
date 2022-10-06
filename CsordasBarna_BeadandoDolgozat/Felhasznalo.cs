@@ -36,15 +36,36 @@ namespace CsordasBarna_BeadandoDolgozat
         //GET-SET metódusok
         public string Email { get; set; }
         public string Lakcim { get; set; }
-
         public string TeljesNev { get; set; }
-
-        //METÓDUSOK
-        protected virtual string Mentes()
+        public string Felhasznalonev
         {
-            return this.teljesNev+";"+this.felhasznalonev + ";" + this.jelszo+";"+this.email+";"+this.lakcim;
+            get
+            {
+                return felhasznalonev;
+            }
+
+            set
+            {
+                felhasznalonev = value;
+            }
+        }
+        public string Jelszo
+        {
+            get
+            {
+                return jelszo;
+            }
+
+            set
+            {
+                jelszo = value;
+            }
         }
 
-        
+        //METÓDUSOK
+        public virtual string Mentes()
+        {
+            return this.teljesNev+";"+this.felhasznalonev + ";" + this.jelszo+";"+this.email+";"+this.lakcim;
+        }      
     }
 }
