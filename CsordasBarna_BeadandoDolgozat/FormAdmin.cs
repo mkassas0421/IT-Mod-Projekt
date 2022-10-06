@@ -157,5 +157,25 @@ namespace CsordasBarna_BeadandoDolgozat
                 //panel2.BackColor = Color.FromArgb(78, 184, 206);
             }
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_Leave(object sender, EventArgs e)
+        {
+            radioButton1.Checked = false;
+        }
+
+        private void radioButton2_Leave(object sender, EventArgs e)
+        {
+            radioButton1.Checked = false;
+        }
+
+        private void radioButton3_Leave(object sender, EventArgs e)
+        {
+            radioButton1.Checked = false;
+        }
     }
 }

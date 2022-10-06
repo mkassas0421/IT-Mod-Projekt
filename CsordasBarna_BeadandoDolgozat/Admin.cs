@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CsordasBarna_BeadandoDolgozat
 {
-    public class Admin:Felhasznalo
+    class Admin:Felhasznalo
     {
         //KONSTRUKTOROK
         public Admin(string felhasznalonev, string jelszo):base(felhasznalonev,jelszo)

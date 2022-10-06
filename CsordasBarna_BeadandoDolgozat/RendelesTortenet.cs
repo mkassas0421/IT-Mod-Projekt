@@ -8,6 +8,6 @@ namespace CsordasBarna_BeadandoDolgozat
 {
     class RendelesTortenet
     {
-        List<Rendeles> megrendelesAdatok;
+        List <Rendeles> megrendelesAdatok;
     }
 }
