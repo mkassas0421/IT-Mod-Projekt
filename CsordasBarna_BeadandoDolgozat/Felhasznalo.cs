@@ -6,60 +6,45 @@ using System.Text;
 namespace CsordasBarna_BeadandoDolgozat
 {
     public class Felhasznalo
+
     {
-        string felhasznalonev;
-        string jelszo;
-        string email;
+        //változók
+        private string email;
+        private string lakcim;
+        private string teljesNev;
 
-        public string Mentes()
-        {
-            return this.felhasznalonev + ";" + this.jelszo;
-        }
+        protected string felhasznalonev;
+        protected string jelszo;
 
+        //KONSTRUKTOROK
+        public Felhasznalo() { }
         public Felhasznalo(string felhasznalonev, string jelszo)
         {
             this.felhasznalonev = felhasznalonev;
             this.jelszo = jelszo;
         }
 
-        //get - set metódusok
-        public string Felhasznalonev
+        public Felhasznalo(string email, string lakcim, string teljesNev, string felhasznalonev, string jelszo)
         {
-            get
-            {
-                return felhasznalonev;
-            }
-
-            set
-            {
-                felhasznalonev = value;
-            }
+            this.email = email;
+            this.lakcim = lakcim;
+            this.teljesNev = teljesNev;
+            this.felhasznalonev = felhasznalonev;
+            this.jelszo = jelszo;
         }
 
-        public string Jelszo
-        {
-            get
-            {
-                return jelszo;
-            }
+        //GET-SET metódusok
+        public string Email { get; set; }
+        public string Lakcim { get; set; }
 
-            set
-            {
-                jelszo = value;
-            }
+        public string TeljesNev { get; set; }
+
+        //METÓDUSOK
+        protected virtual string Mentes()
+        {
+            return this.teljesNev+";"+this.felhasznalonev + ";" + this.jelszo+";"+this.email+";"+this.lakcim;
         }
 
-        public string Email
-        {
-            get
-            {
-                return email;
-            }
-
-            set
-            {
-                email = value;
-            }
-        }
+        
     }
 }

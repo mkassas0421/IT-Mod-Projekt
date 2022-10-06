@@ -193,6 +193,7 @@ namespace CsordasBarna_BeadandoDolgozat
             radioButton2.Checked = true;
             FormSajatTermekBevitel fsajat = new FormSajatTermekBevitel();
             fsajat.ShowDialog();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
