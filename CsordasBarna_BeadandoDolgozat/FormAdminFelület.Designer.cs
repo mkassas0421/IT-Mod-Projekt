@@ -35,6 +35,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUjidegentermek = new System.Windows.Forms.Button();
             this.btnUjtermek = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblFelhasznalo = new System.Windows.Forms.Label();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -74,6 +74,7 @@
             this.lvOutput.TabIndex = 1;
             this.lvOutput.UseCompatibleStateImageBehavior = false;
             this.lvOutput.View = System.Windows.Forms.View.List;
+            this.lvOutput.Visible = false;
             // 
             // btnKilép
             // 
@@ -100,6 +101,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Összes termék";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Visible = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
@@ -113,6 +115,7 @@
             this.radioButton2.TabIndex = 4;
             this.radioButton2.Text = "Saját termék";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Visible = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
@@ -126,6 +129,7 @@
             this.radioButton3.TabIndex = 5;
             this.radioButton3.Text = "Beszerzett termék";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.Visible = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // panel3
@@ -150,6 +154,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(248, 710);
             this.panel3.TabIndex = 11;
+            this.panel3.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 184);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(4, 208);
+            this.pnlNav.TabIndex = 25;
             // 
             // pictureBox1
             // 
@@ -165,7 +178,7 @@
             // 
             // btnUjidegentermek
             // 
-            this.btnUjidegentermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnUjidegentermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.btnUjidegentermek.FlatAppearance.BorderSize = 0;
             this.btnUjidegentermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUjidegentermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -179,10 +192,11 @@
             this.btnUjidegentermek.UseVisualStyleBackColor = false;
             this.btnUjidegentermek.Visible = false;
             this.btnUjidegentermek.Click += new System.EventHandler(this.btnUjidegentermek_Click);
+            this.btnUjidegentermek.Leave += new System.EventHandler(this.btnUjidegentermek_Leave);
             // 
             // btnUjtermek
             // 
-            this.btnUjtermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnUjtermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.btnUjtermek.FlatAppearance.BorderSize = 0;
             this.btnUjtermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUjtermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -196,6 +210,7 @@
             this.btnUjtermek.UseVisualStyleBackColor = false;
             this.btnUjtermek.Visible = false;
             this.btnUjtermek.Click += new System.EventHandler(this.btnUjtermek_Click);
+            this.btnUjtermek.Leave += new System.EventHandler(this.btnUjtermek_Leave);
             // 
             // button1
             // 
@@ -356,14 +371,6 @@
             this.lblFelhasznalo.Size = new System.Drawing.Size(61, 20);
             this.lblFelhasznalo.TabIndex = 1;
             this.lblFelhasznalo.Text = "Admin";
-            // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 184);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(4, 208);
-            this.pnlNav.TabIndex = 25;
             // 
             // FormAdminFelület
             // 

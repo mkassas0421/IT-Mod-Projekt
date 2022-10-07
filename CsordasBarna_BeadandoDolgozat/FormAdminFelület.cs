@@ -233,6 +233,10 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
 
+            lvOutput.Visible = true;
+            radioButton1.Visible = true;
+            radioButton2.Visible = true;
+            radioButton3.Visible = true;
 
             //2 új button lenyitása a terméklista gomb alá
             btnUjtermek.Visible = true;
@@ -261,6 +265,12 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnKezdolap_Click(object sender, EventArgs e)
         {
+            lvOutput.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+
+            szamlalo = 0;
             //Terméklista leugró fül visszacsukása
             if (szamlalo % 2 == 0)
             {
@@ -289,6 +299,11 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lvOutput.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            szamlalo = 0;
             //Terméklista leugró fül visszacsukása
             if (szamlalo % 2 == 0)
             {
@@ -319,6 +334,7 @@ namespace CsordasBarna_BeadandoDolgozat
             szamlalo++;
             button1.BackColor = Color.FromArgb(24, 30, 54);
 
+           
 
             //leugró 2 button összecsukása
             /*ide kell egy feltételes elágazás, hogy ez csak akkor következzen be hogyha nem a btnUjtermek_Click vagy nem a btnUjidegentermek_Click-re megyünk
@@ -340,6 +356,11 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button3_Click(object sender, EventArgs e)
         {
+            lvOutput.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            szamlalo = 0;
             //Terméklista leugró fül visszacsukása
             if (szamlalo % 2 == 0)
             {
@@ -362,6 +383,11 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button4_Click(object sender, EventArgs e)
         {
+            lvOutput.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            szamlalo = 0;
             //Terméklista leugró fül visszacsukása
             if (szamlalo % 2 == 0)
             {
@@ -442,6 +468,8 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnUjtermek_Click(object sender, EventArgs e)
         {
+
+            lvOutput.Visible = true;
             FormSajatTermekBevitel frm = new FormSajatTermekBevitel();
             frm.Show();
             btnUjtermClicked = true;
@@ -449,9 +477,22 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnUjidegentermek_Click(object sender, EventArgs e)
         {
+
+            lvOutput.Visible = true;
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
             btnUjidegenClicked = true;
             frm.Show();
+        }
+
+        private void btnUjidegentermek_Leave(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void btnUjtermek_Leave(object sender, EventArgs e)
+        {
+            
         }
     }
 }
