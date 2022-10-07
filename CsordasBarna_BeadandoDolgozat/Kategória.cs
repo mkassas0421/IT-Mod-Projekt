@@ -11,6 +11,7 @@ namespace CsordasBarna_BeadandoDolgozat
         Fehérjék,
         Testtömegnövelők,
         Aminosavak,
-        Kreatin
+        Kreatin,
+        PreWorkout
     }
 }

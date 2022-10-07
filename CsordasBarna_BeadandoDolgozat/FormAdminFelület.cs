@@ -39,6 +39,8 @@ namespace CsordasBarna_BeadandoDolgozat
             //form oldalainak kerekítése (formázás)
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+
             pnlNav.Height = btnKezdolap.Height;
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
@@ -241,21 +243,21 @@ namespace CsordasBarna_BeadandoDolgozat
             //2 új button lenyitása a terméklista gomb alá
             btnUjtermek.Visible = true;
             btnUjidegentermek.Visible = true;
-            btnUjtermek.Location = new Point(0, 280);
-            btnUjidegentermek.Location = new Point(0, 333);
-            button2.Location = new Point(0, 385);
-            button3.Location = new Point(0, 437);
-            pictureBox4.Location = new Point(176, 393);
-            pictureBox5.Location = new Point(176, 445);
+            btnUjtermek.Location = new Point(0, 250);
+            btnUjidegentermek.Location = new Point(0, 300);
+            button2.Location = new Point(0, 350);
+            button3.Location = new Point(0, 400);
+            pictureBox4.Location = new Point(175, 363);
+            pictureBox5.Location = new Point(175, 413);
 
 
             if (szamlalo % 2 == 0) {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
             
 
@@ -265,6 +267,10 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnKezdolap_Click(object sender, EventArgs e)
         {
+            //Termékfelvitelpanelen lévő dolgok eltűntetése
+            pnlFelvitel.Visible = false;
+
+
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -276,10 +282,10 @@ namespace CsordasBarna_BeadandoDolgozat
             {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
 
 
@@ -299,6 +305,9 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Termékfelvitelpanelen lévő dolgok eltűntetése
+            pnlFelvitel.Visible = false;
+
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -309,10 +318,10 @@ namespace CsordasBarna_BeadandoDolgozat
             {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
 
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
@@ -341,12 +350,12 @@ namespace CsordasBarna_BeadandoDolgozat
             mert különben nem lehet megnyitni az adatfelvivős formokat*/
             if (btnUjidegenClicked || btnUjtermClicked)
             {
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
             btnUjidegenClicked = false;
             btnUjtermClicked = false;
@@ -356,6 +365,9 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Termékfelvitelpanelen lévő dolgok eltűntetése
+            pnlFelvitel.Visible = false;
+
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -366,10 +378,10 @@ namespace CsordasBarna_BeadandoDolgozat
             {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
 
 
@@ -383,6 +395,9 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Termékfelvitelpanelen lévő dolgok eltűntetése
+            pnlFelvitel.Visible = false;
+
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -393,10 +408,10 @@ namespace CsordasBarna_BeadandoDolgozat
             {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 281);
-                button3.Location = new Point(0, 333);
-                pictureBox4.Location = new Point(176, 289);
-                pictureBox5.Location = new Point(176, 341);
+                button2.Location = new Point(0, 250);
+                button3.Location = new Point(0, 300);
+                pictureBox4.Location = new Point(175, 263);
+                pictureBox5.Location = new Point(175, 313);
             }
 
 
@@ -468,31 +483,89 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnUjtermek_Click(object sender, EventArgs e)
         {
-
             lvOutput.Visible = true;
-            FormSajatTermekBevitel frm = new FormSajatTermekBevitel();
+            FormSajatTermekBevitel frm = new FormSajatTermekBevitel() {Dock = DockStyle.Fill,TopLevel=false,TopMost=true};
+            this.pnlFelvitel.Controls.Clear();
+            this.pnlFelvitel.Controls.Add(frm);
             frm.Show();
             btnUjtermClicked = true;
+
+            //panel láthatósága és a sajatTermekFelvitelForm megnyitása bele
+            pnlFelvitel.Visible = true;
+            
         }
 
         private void btnUjidegentermek_Click(object sender, EventArgs e)
         {
-
             lvOutput.Visible = true;
-            FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel();
+            pnlFelvitel.Visible = true;
+            
+            FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pnlFelvitel.Controls.Clear();
+            this.pnlFelvitel.Controls.Add(frm);
+                frm.Show();
             btnUjidegenClicked = true;
-            frm.Show();
         }
 
         private void btnUjidegentermek_Leave(object sender, EventArgs e)
         {
-
             
+
         }
 
         private void btnUjtermek_Leave(object sender, EventArgs e)
         {
             
+        }
+
+        private void lvOutput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlNav_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFelhasznalo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

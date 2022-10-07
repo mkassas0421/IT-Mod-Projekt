@@ -42,7 +42,27 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnBelépés_Click(object sender, EventArgs e)
         {
-            
+            //ideiglenes belépés hogy ne kelljen mindig beirni a jelszavakat futtatáskor
+            if (tbAdmin.Text == "Azonosító" && tbAdminJelszo.Text == "Jelszó" && radiobtnAdmin.Checked) {
+                tbAdminJelszo.Clear();
+                tbAdmin.Clear();
+                FormAdminFelület frm = new FormAdminFelület();
+                frm.ShowDialog();
+                this.Close();
+            } else if (tbAdmin.Text == "Azonosító" && tbAdminJelszo.Text == "Jelszó" && radiobtnTermek.Checked) {
+                tbAdminJelszo.Clear();
+                tbAdmin.Clear();
+                FormTermekFelelos frm = new FormTermekFelelos();
+                frm.ShowDialog();
+                this.Close();
+            } else if (tbAdmin.Text == "Azonosító" && tbAdminJelszo.Text == "Jelszó" && radiobtnCRM.Checked) {
+                tbAdminJelszo.Clear();
+                tbAdmin.Clear();
+                FormCRMFelelos frm = new FormCRMFelelos();
+                frm.ShowDialog();
+                this.Close();
+            }
+
             if (radiobtnAdmin.Checked) {
                 //Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
                 Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text)); 

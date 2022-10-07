@@ -50,5 +50,10 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             btnFelvitel.Enabled = true;
         }
+
+        private void lblFelirat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CsordasBarna_BeadandoDolgozat.Admin" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Beszallito" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAABgAAAgQAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Beszallito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Beszerzett" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAQEAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Beszerzett.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.CRMFelelos" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAIAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMFelelos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Felhasznalo" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAACAkAAAABAAAAAAAACAABAAgAAQAAAA=</HashCode>
+      <FileName>Felhasznalo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormAdmin" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEEEQAAACAAAAIhAADAQAADAFABAAAAAEECATAwgBA=</HashCode>
+      <FileName>FormAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormAdminFelület" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AZgBKhUTAKCABARBAECAYAQnCEo8BAAAIHgYRYDAgAI=</HashCode>
+      <FileName>FormAdminFelület.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormBejelentkezés" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEIBEIUCAAGEElQAKEAAACIAAAAhBAAEgAAQBgIAQ=</HashCode>
+      <FileName>FormBejelentkezés.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormBeszerzettTermekBevitel" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACABABAABACAAAACCAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>FormBeszerzettTermekBevitel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormCRMFelelos" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormCRMFelelos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormFelhasznaloFelulet" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIFAAABCCAAABAAAACAABECAAAAAAAAAAACAAAAgAI=</HashCode>
+      <FileName>FormFelhasznaloFelulet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormRegisztráció" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABMAAQACmAACRBhQACEFIACAADQACRAhCAAAQBggBA=</HashCode>
+      <FileName>FormRegisztráció.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormRendeles" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAUACCAABFAAAACAABACAAAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>FormRendeles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormSajatTermekBevitel" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAUQACIBAFABAACAQAICAIAQAQQQAEABAAAAAEA=</HashCode>
+      <FileName>FormSajatTermekBevitel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.FormTermekFelelos" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormTermekFelelos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Kosar" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAEAAIAAAAAAAAAACA=</HashCode>
+      <FileName>Kosar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Program" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAEA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Rendeles" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAACAAAAAAAAAAAgAAAAIAAAgAAAAIAAAAA=</HashCode>
+      <FileName>Rendeles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.RendelesTortenet" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RendelesTortenet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Sajat" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACIAgAAiAAAQAAAAAAAABEAAAARAAAgAIAAAAAA=</HashCode>
+      <FileName>Sajat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.TermekFelelos" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAACCAAAAAAAAAAAA=</HashCode>
+      <FileName>TermekFelelos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Properties.Resources" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAEAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CsordasBarna_BeadandoDolgozat.Properties.Settings" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CsordasBarna_BeadandoDolgozat.Kategória">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAGAAAAAAAAAAAAAAABAAEAAAAAAAAAIAA=</HashCode>
+      <FileName>Kategória.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CsordasBarna_BeadandoDolgozat.Márka">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEggAAAAAEAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Márka.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

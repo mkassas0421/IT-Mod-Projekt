@@ -36,11 +36,11 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(24, 50);
+            this.label1.Location = new System.Drawing.Point(33, 52);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(33, 90);
+            this.label2.Location = new System.Drawing.Point(43, 95);
             // 
             // label3
             // 
@@ -48,15 +48,15 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(16, 130);
+            this.label4.Location = new System.Drawing.Point(26, 133);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(48, 170);
+            this.label5.Location = new System.Drawing.Point(57, 173);
             // 
             // tbTerméknév
             // 
-            this.tbTerméknév.Location = new System.Drawing.Point(92, 47);
+            this.tbTerméknév.Location = new System.Drawing.Point(116, 47);
             // 
             // cbKategória
             // 
@@ -85,34 +85,45 @@
             "Fehérjék",
             "Testtömegnövelők",
             "Aminosavak",
+            "Kreatin",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
             "Kreatin"});
-            this.cbKategória.Location = new System.Drawing.Point(92, 87);
+            this.cbKategória.Location = new System.Drawing.Point(116, 87);
             // 
             // dtpDátum
             // 
-            this.dtpDátum.Location = new System.Drawing.Point(92, 204);
+            this.dtpDátum.Location = new System.Drawing.Point(116, 205);
             // 
             // btnFelvitel
             // 
-            this.btnFelvitel.Location = new System.Drawing.Point(217, 230);
+            this.btnFelvitel.Location = new System.Drawing.Point(390, 220);
             this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
             // numÁr
             // 
-            this.numÁr.Location = new System.Drawing.Point(93, 168);
+            this.numÁr.Location = new System.Drawing.Point(116, 168);
             // 
             // numKiszerelés
             // 
-            this.numKiszerelés.Location = new System.Drawing.Point(93, 128);
+            this.numKiszerelés.Location = new System.Drawing.Point(116, 128);
             // 
             // btnMégsem
             // 
-            this.btnMégsem.Location = new System.Drawing.Point(217, 259);
+            this.btnMégsem.Location = new System.Drawing.Point(390, 249);
+            // 
+            // lblFelirat
+            // 
+            this.lblFelirat.Location = new System.Drawing.Point(278, 9);
+            this.lblFelirat.Visible = false;
+            this.lblFelirat.Click += new System.EventHandler(this.lblFelirat_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 9);
+            this.label6.Location = new System.Drawing.Point(63, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 12;
@@ -121,7 +132,7 @@
             // cbMárka
             // 
             this.cbMárka.FormattingEnabled = true;
-            this.cbMárka.Location = new System.Drawing.Point(93, 6);
+            this.cbMárka.Location = new System.Drawing.Point(116, 12);
             this.cbMárka.Name = "cbMárka";
             this.cbMárka.Size = new System.Drawing.Size(121, 21);
             this.cbMárka.TabIndex = 13;
@@ -132,12 +143,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 306);
+            this.ClientSize = new System.Drawing.Size(503, 281);
             this.Controls.Add(this.cbMárka);
             this.Controls.Add(this.label6);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FormBeszerzettTermekBevitel";
             this.Text = "BeszerzettTermekBevitel";
             this.Load += new System.EventHandler(this.FormBeszerzettTermekBevitel_Load);
+            this.Controls.SetChildIndex(this.lblFelirat, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
