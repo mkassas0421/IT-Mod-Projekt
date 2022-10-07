@@ -18,7 +18,7 @@ namespace CsordasBarna_BeadandoDolgozat
         private bool isCollapsed;
         private bool btnUjtermClicked=false;
         private bool btnUjidegenClicked=false;
-        int szamlalo = 1; //a lenyíló menüt kattintásait számlálja, hogy minden második kattintásra összecsukódjon a lenyiló menü a terméklista gombbnál
+        int szamlalo = 0; //a lenyíló menüt kattintásait számlálja, hogy minden második kattintásra összecsukódjon a lenyiló menü a terméklista gombbnál
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -228,30 +228,30 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             szamlalo++;
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
-            //pnlNav.Height = button1.Height;
-            //pnlNav.Top = button1.Top;
-            //pnlNav.Left = button1.Left;
+            pnlNav.Height = button1.Height;
+            pnlNav.Top = button1.Top;
+            pnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
 
 
             //2 új button lenyitása a terméklista gomb alá
             btnUjtermek.Visible = true;
             btnUjidegentermek.Visible = true;
-            btnUjtermek.Location = new Point(0, 234);
-            btnUjidegentermek.Location = new Point(0, 276);
-            button2.Location = new Point(0, 318);
-            button3.Location = new Point(0, 360);
-            pictureBox4.Location = new Point(132, 326);
-            pictureBox5.Location = new Point(132, 368);
+            btnUjtermek.Location = new Point(0, 280);
+            btnUjidegentermek.Location = new Point(0, 333);
+            button2.Location = new Point(0, 385);
+            button3.Location = new Point(0, 437);
+            pictureBox4.Location = new Point(176, 393);
+            pictureBox5.Location = new Point(176, 445);
 
 
-            if (szamlalo % 2 == 1) {
+            if (szamlalo % 2 == 0) {
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                button2.Location = new Point(0, 234);
-                button3.Location = new Point(0, 276);
-                pictureBox4.Location = new Point(132, 239);
-                pictureBox5.Location = new Point(132, 282);
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
             }
             
 
@@ -261,6 +261,18 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnKezdolap_Click(object sender, EventArgs e)
         {
+            //Terméklista leugró fül visszacsukása
+            if (szamlalo % 2 == 0)
+            {
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
+            }
+
+
             pictureBox6.BackColor = Color.Transparent;
 
             pnlNav.Height = btnKezdolap.Height;
@@ -277,7 +289,17 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            //Terméklista leugró fül visszacsukása
+            if (szamlalo % 2 == 0)
+            {
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
+            }
+
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button2.Height;
             pnlNav.Top = button2.Top;
@@ -294,7 +316,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button1_Leave(object sender, EventArgs e)
         {
-            szamlalo = 1;
+            szamlalo++;
             button1.BackColor = Color.FromArgb(24, 30, 54);
 
 
@@ -303,12 +325,12 @@ namespace CsordasBarna_BeadandoDolgozat
             mert különben nem lehet megnyitni az adatfelvivős formokat*/
             if (btnUjidegenClicked || btnUjtermClicked)
             {
-                button2.Location = new Point(0, 234);
-                button3.Location = new Point(0, 276);
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
                 btnUjtermek.Visible = false;
                 btnUjidegentermek.Visible = false;
-                pictureBox4.Location = new Point(132, 239);
-                pictureBox5.Location = new Point(132, 282);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
             }
             btnUjidegenClicked = false;
             btnUjtermClicked = false;
@@ -318,7 +340,18 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            //Terméklista leugró fül visszacsukása
+            if (szamlalo % 2 == 0)
+            {
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
+            }
+
+
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button3.Height;
             pnlNav.Top = button3.Top;
@@ -329,6 +362,18 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Terméklista leugró fül visszacsukása
+            if (szamlalo % 2 == 0)
+            {
+                btnUjtermek.Visible = false;
+                btnUjidegentermek.Visible = false;
+                button2.Location = new Point(0, 281);
+                button3.Location = new Point(0, 333);
+                pictureBox4.Location = new Point(176, 289);
+                pictureBox5.Location = new Point(176, 341);
+            }
+
+
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button4.Height;
             pnlNav.Top = button4.Top;
@@ -389,11 +434,6 @@ namespace CsordasBarna_BeadandoDolgozat
         //        }
         //    }
         //}
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {

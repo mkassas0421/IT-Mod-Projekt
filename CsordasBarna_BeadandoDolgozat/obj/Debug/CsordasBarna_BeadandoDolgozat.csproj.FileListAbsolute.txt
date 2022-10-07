@@ -143,3 +143,4 @@ C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormSajatTermekBevitel.resources
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.Properties.Resources.resources
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.csproj.GenerateResource.Cache
+C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormCRMFelelos.resources

@@ -15,8 +15,8 @@ namespace CsordasBarna_BeadandoDolgozat
     public partial class FormAdmin : Form
     {
         List<Felhasznalo> adminLista = new List<Felhasznalo>();   //belépéshez felhasznalonev és jelszo : admin/admin az Admin.txt-ben tárolódik 
-        List<Felhasznalo> termekFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : termek/termek az TermekFelelos.txt-ben tárolódik
-        List<Felhasznalo> crmFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : crm/crm az CRMFelelos.txt-ben tárolódik
+        List<Felhasznalo> termekFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : termek/termek a TermekFelelos.txt-ben tárolódik
+        List<Felhasznalo> crmFelelosLista = new List<Felhasznalo>(); //belépéshez felhasznalonev és jelszo : crm/crm a CRMFelelos.txt-ben tárolódik
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -42,10 +42,10 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnBelépés_Click(object sender, EventArgs e)
         {
-            tbAdmin.Clear();
-            tbAdminJelszo.Clear();
+            
             if (radiobtnAdmin.Checked) {
-                Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                //Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                Felhasznalo admin = adminLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text)); 
                 if (admin != null)
                 {
                     tbAdminJelszo.Clear();
@@ -66,6 +66,7 @@ namespace CsordasBarna_BeadandoDolgozat
             else if (radiobtnTermek.Checked)
             {
                 Felhasznalo termekFelelos = termekFelelosLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text) && x.Jelszo.Equals(tbAdminJelszo.Text));
+                //Felhasznalo ures = termekFelelosLista.Find(x => x.Felhasznalonev.Equals(tbAdmin.Text.Equals(string.Empty)) && x.Jelszo.Equals(tbAdminJelszo.Text.Equals(string.Empty)));
                 if (termekFelelos != null)
                 {
                     
@@ -241,12 +242,7 @@ namespace CsordasBarna_BeadandoDolgozat
         private void radiobtnCRM_Leave(object sender, EventArgs e)
         {
             radiobtnAdmin.Checked = false;
-        }
-
-        private void ss(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void radiobtnAdmin_CheckedChanged(object sender, EventArgs e)
         {

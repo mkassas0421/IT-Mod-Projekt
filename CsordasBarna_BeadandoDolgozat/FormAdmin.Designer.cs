@@ -180,7 +180,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin";
             this.Text = "23";
-            this.Load += new System.EventHandler(this.ss);
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

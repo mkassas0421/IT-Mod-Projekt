@@ -133,6 +133,9 @@
     <EmbeddedResource Include="FormBeszerzettTermekBevitel.resx">
       <DependentUpon>FormBeszerzettTermekBevitel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCRMFelelos.resx">
+      <DependentUpon>FormCRMFelelos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFelhasznaloFelulet.resx">
       <DependentUpon>FormFelhasznaloFelulet.cs</DependentUpon>
     </EmbeddedResource>
