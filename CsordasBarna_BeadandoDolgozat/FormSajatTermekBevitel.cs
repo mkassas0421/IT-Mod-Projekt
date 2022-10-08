@@ -42,8 +42,8 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void FormSajatTermekBevitel_Load(object sender, EventArgs e)
         {
-            string[] s = Enum.GetNames(typeof(Kategória));
-            foreach (string item in s)
+            string[] kategoria = Enum.GetNames(typeof(Kategória));
+            foreach (string item in kategoria)
             {
                 cbKategória.Items.Add(item);
             }

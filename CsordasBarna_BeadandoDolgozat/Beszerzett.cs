@@ -23,6 +23,11 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             return base.LegutobbiListabaKiiratas()+this.márka.PadRight(15);
         }
+
+        public override string LegutobbiListabaKiiratas(Sajat obj)
+        {
+            return base.LegutobbiListabaKiiratas(obj)+this.márka.PadRight(15);
+        }
         public Beszerzett(string terméknév, string termékkategória, int kiszerelés, int ár, string dátum, string márka):base(terméknév,termékkategória,kiszerelés,ár,dátum)
         {
             this.márka = márka;

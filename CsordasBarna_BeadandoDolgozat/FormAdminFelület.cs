@@ -9,15 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace CsordasBarna_BeadandoDolgozat
 {
     public partial class FormAdminFelület : Form
     {
         List<Sajat> lista = new List<Sajat>();
+        static int beolvasottTermekekSzama;
+        static Stack<Sajat> termekek = new Stack<Sajat>();
+
         private bool isCollapsed;
-        private bool btnUjtermClicked=false;
-        private bool btnUjidegenClicked=false;
+        private bool btnUjtermClicked = false;
+        private bool btnUjidegenClicked = false;
         int szamlalo = 0; //a lenyíló menüt kattintásait számlálja, hogy minden második kattintásra összecsukódjon a lenyiló menü a terméklista gombbnál
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -34,7 +39,7 @@ namespace CsordasBarna_BeadandoDolgozat
         public FormAdminFelület()
         {
             InitializeComponent();
-            
+
 
             //form oldalainak kerekítése (formázás)
             this.FormBorderStyle = FormBorderStyle.None;
@@ -45,7 +50,7 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
             btnKezdolap.BackColor = Color.FromArgb(46, 51, 73);
-            pictureBox6.BackColor= Color.FromArgb(46, 51, 73);
+            pictureBox6.BackColor = Color.FromArgb(46, 51, 73);
         }
         protected override void WndProc(ref Message m)
         {
@@ -64,7 +69,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void btnKilép_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Biztosan ki szeretne lépni?","Figyelem!",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            if (MessageBox.Show("Biztosan ki szeretne lépni?", "Figyelem!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -102,29 +107,50 @@ namespace CsordasBarna_BeadandoDolgozat
 
         private void FormAdminFelület_Load(object sender, EventArgs e)
         {
-            
+
             try
             {
+                //ez a két lista egyelőre nincs használatban csak elmentődnek külön-külön a két osztály beolvasott tagjai
+                List<Sajat> beolvasottSajatTermekLista = new List<Sajat>();
+                List<Beszerzett> beolvasottBeszerzettTermekLista = new List<Beszerzett>();
+
+                Stack<Sajat> stack = new Stack<Sajat>();
+                beolvasottTermekekSzama = 0;
                 StreamReader rd = new StreamReader("Termekek.txt", Encoding.UTF8);
                 while (!rd.EndOfStream)
                 {
                     string[] s = rd.ReadLine().Split(';');
-                    if (s.Length==5)
+                    if (s.Length == 5)
                     {
                         //sajat termek
                         Sajat t = new Sajat(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4]);
+                        beolvasottSajatTermekLista.Add(t);
+                        stack.Push(t);
+                        beolvasottTermekekSzama++;
                         t.Courier(lvOutput, t.Térköz());
-                        t.Courier(lvLegutobbi, t.LegutobbiListabaKiiratas());
+
                     }
                     else
                     {
                         //beszerzett termek
                         Beszerzett t = new Beszerzett(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4], s[5]);
+                        beolvasottBeszerzettTermekLista.Add(t);
+                        stack.Push(t);
+                        beolvasottTermekekSzama++;
                         t.Courier(lvOutput, t.Térköz());
-                        t.Courier(lvLegutobbi, t.LegutobbiListabaKiiratas());
+
                     }
                 }
                 rd.Close();
+                //lvLegutobbi feltöltése Stackből
+                int n = stack.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    Sajat obj = stack.Peek();
+                    termekek.Push(obj);
+                    Sajat sajat = stack.Pop();
+                    sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                }
             }
             catch (Exception ex)
             {
@@ -182,27 +208,27 @@ namespace CsordasBarna_BeadandoDolgozat
                 {
                     Beszerzett t = new Beszerzett(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4], s[5]);
                     t.Courier(lvOutput, t.Térköz());
-                }               
+                }
             }
             rd.Close();
         }
 
         private void btnTörlés_Click(object sender, EventArgs e)
         {
-           
-            }
+
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             radioButton2.Checked = true;
             FormSajatTermekBevitel fsajat = new FormSajatTermekBevitel();
             fsajat.ShowDialog();
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -231,6 +257,10 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button1_Click(object sender, EventArgs e)
         {
             szamlalo++;
+
+            comboboxFelvitt.Visible = true;
+            lblLegutobbFelvitt.Enabled = true;
+            lblLegutobbFelvitt.Visible = true;
             btnKezdolap.BackColor = Color.FromArgb(24, 30, 54);
             pnlNav.Height = button1.Height;
             pnlNav.Top = button1.Top;
@@ -265,7 +295,7 @@ namespace CsordasBarna_BeadandoDolgozat
                 pictureBox4.Location = new Point(175, 263);
                 pictureBox5.Location = new Point(175, 313);
             }
-            
+
 
             //timer1.Start();
             //drop_down(sender,e);
@@ -275,8 +305,9 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
             pnlFelvitel.Visible = false;
-
-
+            lblLegutobbFelvitt.Visible = false;
+            lvLegutobbi.Visible = false;
+            lvOutput.Visible = false;
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -300,7 +331,7 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Height = btnKezdolap.Height;
             pnlNav.Top = btnKezdolap.Top;
             pnlNav.Left = btnKezdolap.Left;
-            btnKezdolap.BackColor = Color.FromArgb(46,51,73);
+            btnKezdolap.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         private void btnKezdolap_Leave(object sender, EventArgs e)
@@ -313,7 +344,9 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
             pnlFelvitel.Visible = false;
-
+            lblLegutobbFelvitt.Visible = false;
+            lvLegutobbi.Visible = false;
+            lvOutput.Visible = false;
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -349,7 +382,7 @@ namespace CsordasBarna_BeadandoDolgozat
             szamlalo++;
             button1.BackColor = Color.FromArgb(24, 30, 54);
 
-           
+
 
             //leugró 2 button összecsukása
             /*ide kell egy feltételes elágazás, hogy ez csak akkor következzen be hogyha nem a btnUjtermek_Click vagy nem a btnUjidegentermek_Click-re megyünk
@@ -373,7 +406,9 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
             pnlFelvitel.Visible = false;
-
+            lvLegutobbi.Visible = false;
+            lblLegutobbFelvitt.Visible = false;
+            lvOutput.Visible = false;
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -403,7 +438,9 @@ namespace CsordasBarna_BeadandoDolgozat
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
             pnlFelvitel.Visible = false;
-
+            lblLegutobbFelvitt.Visible = false;
+            lvLegutobbi.Visible = false;
+            lvOutput.Visible = false;
             lvOutput.Visible = false;
             radioButton1.Visible = false;
             radioButton2.Visible = false;
@@ -490,7 +527,7 @@ namespace CsordasBarna_BeadandoDolgozat
         private void btnUjtermek_Click(object sender, EventArgs e)
         {
             lvOutput.Visible = true;
-            FormSajatTermekBevitel frm = new FormSajatTermekBevitel() {Dock = DockStyle.Fill,TopLevel=false,TopMost=true};
+            FormSajatTermekBevitel frm = new FormSajatTermekBevitel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.pnlFelvitel.Controls.Clear();
             this.pnlFelvitel.Controls.Add(frm);
             frm.Show();
@@ -498,30 +535,30 @@ namespace CsordasBarna_BeadandoDolgozat
 
             //panel láthatósága és a sajatTermekFelvitelForm megnyitása bele
             pnlFelvitel.Visible = true;
-            
+
         }
 
         private void btnUjidegentermek_Click(object sender, EventArgs e)
         {
             lvOutput.Visible = true;
             pnlFelvitel.Visible = true;
-            
+
             FormBeszerzettTermekBevitel frm = new FormBeszerzettTermekBevitel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.pnlFelvitel.Controls.Clear();
             this.pnlFelvitel.Controls.Add(frm);
-                frm.Show();
+            frm.Show();
             btnUjidegenClicked = true;
         }
 
         private void btnUjidegentermek_Leave(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void btnUjtermek_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lvOutput_SelectedIndexChanged(object sender, EventArgs e)
@@ -573,7 +610,54 @@ namespace CsordasBarna_BeadandoDolgozat
         {
 
         }
-    }
-}
+
+        private void comboboxFelvitt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboboxFelvitt.SelectedIndex)
+            {
+
+                //NULLREFERENCE EXCEPTION
+
+                case 0:
+                    lvLegutobbi.Clear();
+                    for (int i = 0; i < beolvasottTermekekSzama; i++)
+                    {
+                        Sajat sajat = termekek.Pop();
+                        //termekek.Push(sajat);
+                        lvLegutobbi.Clear();
+                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    }
+                    break;
+                case 1:
+                    lvLegutobbi.Clear();
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Sajat sajat = termekek.Pop();
+                        //termekek.Push(sajat);                        
+                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    }
+                    break;
+                case 2:
+                    lvLegutobbi.Clear();
+                    for (int i = 0; i < 10; i++)
+                    {
+                        Sajat sajat = termekek.Pop();
+                        //termekek.Push(sajat);
+                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    }
+                    break;
+                case 3:
+                    lvLegutobbi.Clear();
+                    for (int i = 0; i < 20; i++)
+                    {
+                        Sajat sajat = termekek.Pop();
+                        //termekek.Push(sajat);
+                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    }
+                    break;
+            }
+        }
+        }
+    } 
     
 

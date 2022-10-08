@@ -51,7 +51,8 @@
             this.lblFelhasznalo = new System.Windows.Forms.Label();
             this.pnlFelvitel = new System.Windows.Forms.Panel();
             this.lvLegutobbi = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLegutobbFelvitt = new System.Windows.Forms.Label();
+            this.comboboxFelvitt = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -82,15 +83,18 @@
             // 
             this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(434, 591);
+            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(425, 589);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 17);
+            this.radioButton1.Size = new System.Drawing.Size(109, 21);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Összes termék";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.Visible = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -98,13 +102,16 @@
             // 
             this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(567, 591);
+            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
+            this.radioButton2.Location = new System.Drawing.Point(558, 589);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 17);
+            this.radioButton2.Size = new System.Drawing.Size(102, 21);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.Text = "Saját termék";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.Visible = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -112,13 +119,16 @@
             // 
             this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(687, 591);
+            this.radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton3.ForeColor = System.Drawing.Color.White;
+            this.radioButton3.Location = new System.Drawing.Point(678, 589);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(109, 17);
+            this.radioButton3.Size = new System.Drawing.Size(131, 21);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.Text = "Beszerzett termék";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.Visible = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -174,14 +184,15 @@
             this.btnUjidegentermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.btnUjidegentermek.FlatAppearance.BorderSize = 0;
             this.btnUjidegentermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUjidegentermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUjidegentermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnUjidegentermek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnUjidegentermek.Location = new System.Drawing.Point(0, 400);
             this.btnUjidegentermek.Margin = new System.Windows.Forms.Padding(4);
             this.btnUjidegentermek.Name = "btnUjidegentermek";
             this.btnUjidegentermek.Size = new System.Drawing.Size(220, 50);
             this.btnUjidegentermek.TabIndex = 23;
-            this.btnUjidegentermek.Text = "Új beszerzett termék";
+            this.btnUjidegentermek.Text = "  Beszerzett termék felvitel";
+            this.btnUjidegentermek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUjidegentermek.UseVisualStyleBackColor = false;
             this.btnUjidegentermek.Visible = false;
             this.btnUjidegentermek.Click += new System.EventHandler(this.btnUjidegentermek_Click);
@@ -192,14 +203,15 @@
             this.btnUjtermek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.btnUjtermek.FlatAppearance.BorderSize = 0;
             this.btnUjtermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUjtermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUjtermek.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnUjtermek.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnUjtermek.Location = new System.Drawing.Point(0, 350);
             this.btnUjtermek.Margin = new System.Windows.Forms.Padding(4);
             this.btnUjtermek.Name = "btnUjtermek";
             this.btnUjtermek.Size = new System.Drawing.Size(220, 50);
             this.btnUjtermek.TabIndex = 22;
-            this.btnUjtermek.Text = "Új termék felvitel";
+            this.btnUjtermek.Text = "  Termék felvitel";
+            this.btnUjtermek.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUjtermek.UseVisualStyleBackColor = false;
             this.btnUjtermek.Visible = false;
             this.btnUjtermek.Click += new System.EventHandler(this.btnUjtermek_Click);
@@ -393,16 +405,35 @@
             this.lvLegutobbi.View = System.Windows.Forms.View.List;
             this.lvLegutobbi.Visible = false;
             // 
-            // label1
+            // lblLegutobbFelvitt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1004, 309);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Legutóbb felvitt termékek";
+            this.lblLegutobbFelvitt.AutoSize = true;
+            this.lblLegutobbFelvitt.Enabled = false;
+            this.lblLegutobbFelvitt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblLegutobbFelvitt.ForeColor = System.Drawing.Color.White;
+            this.lblLegutobbFelvitt.Location = new System.Drawing.Point(1004, 309);
+            this.lblLegutobbFelvitt.Name = "lblLegutobbFelvitt";
+            this.lblLegutobbFelvitt.Size = new System.Drawing.Size(198, 20);
+            this.lblLegutobbFelvitt.TabIndex = 13;
+            this.lblLegutobbFelvitt.Text = "Legutóbb felvitt termékek";
+            this.lblLegutobbFelvitt.Visible = false;
+            // 
+            // comboboxFelvitt
+            // 
+            this.comboboxFelvitt.BackColor = System.Drawing.Color.White;
+            this.comboboxFelvitt.ForeColor = System.Drawing.Color.Black;
+            this.comboboxFelvitt.FormattingEnabled = true;
+            this.comboboxFelvitt.Items.AddRange(new object[] {
+            "Összes",
+            "Legutóbbi 5 termék",
+            "Legutóbbi 10 termék",
+            "Legutóbbi 20 termék"});
+            this.comboboxFelvitt.Location = new System.Drawing.Point(1382, 305);
+            this.comboboxFelvitt.Name = "comboboxFelvitt";
+            this.comboboxFelvitt.Size = new System.Drawing.Size(129, 25);
+            this.comboboxFelvitt.TabIndex = 14;
+            this.comboboxFelvitt.Visible = false;
+            this.comboboxFelvitt.SelectedIndexChanged += new System.EventHandler(this.comboboxFelvitt_SelectedIndexChanged);
             // 
             // FormAdminFelület
             // 
@@ -410,7 +441,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1520, 641);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboboxFelvitt);
+            this.Controls.Add(this.lblLegutobbFelvitt);
             this.Controls.Add(this.lvLegutobbi);
             this.Controls.Add(this.pnlFelvitel);
             this.Controls.Add(this.panel3);
@@ -418,6 +450,8 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lvOutput);
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAdminFelület";
@@ -460,7 +494,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel pnlFelvitel;
-        private System.Windows.Forms.ListView lvLegutobbi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLegutobbFelvitt;
+        public System.Windows.Forms.ListView lvLegutobbi;
+        private System.Windows.Forms.ComboBox comboboxFelvitt;
     }
 }

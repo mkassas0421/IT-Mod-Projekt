@@ -36,31 +36,67 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(46, 62);
+            this.label1.Location = new System.Drawing.Point(15, 39);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(52, 169);
+            this.label2.Location = new System.Drawing.Point(21, 132);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(260, 173);
+            this.label3.Location = new System.Drawing.Point(202, 135);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(260, 63);
+            this.label4.Location = new System.Drawing.Point(202, 39);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(260, 117);
+            this.label5.Location = new System.Drawing.Point(202, 86);
             // 
             // tbTerméknév
             // 
-            this.tbTerméknév.Location = new System.Drawing.Point(49, 82);
+            this.tbTerméknév.Location = new System.Drawing.Point(18, 59);
             // 
             // cbKategória
             // 
             this.cbKategória.Items.AddRange(new object[] {
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
             "Vitaminok",
             "Fehérjék",
             "Testtömegnövelők",
@@ -126,32 +162,29 @@
             "Testtömegnövelők",
             "Aminosavak",
             "Kreatin"});
-            this.cbKategória.Location = new System.Drawing.Point(49, 189);
+            this.cbKategória.Location = new System.Drawing.Point(18, 152);
             // 
             // dtpDátum
             // 
-            this.dtpDátum.Location = new System.Drawing.Point(263, 193);
+            this.dtpDátum.Location = new System.Drawing.Point(205, 155);
             this.dtpDátum.Size = new System.Drawing.Size(223, 22);
             // 
             // btnFelvitel
             // 
-            this.btnFelvitel.Location = new System.Drawing.Point(387, 221);
+            this.btnFelvitel.Location = new System.Drawing.Point(328, 179);
             this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
             // numÁr
             // 
-            this.numÁr.Location = new System.Drawing.Point(263, 132);
+            this.numÁr.Location = new System.Drawing.Point(205, 105);
             // 
             // numKiszerelés
             // 
-            this.numKiszerelés.Location = new System.Drawing.Point(263, 83);
-            // 
-            // btnMégsem
-            // 
-            
+            this.numKiszerelés.Location = new System.Drawing.Point(205, 59);
             // 
             // lblFelirat
             // 
+            this.lblFelirat.Location = new System.Drawing.Point(14, 8);
             this.lblFelirat.Size = new System.Drawing.Size(245, 22);
             this.lblFelirat.Text = "Beszerzett termék felvitele";
             this.lblFelirat.Click += new System.EventHandler(this.lblFelirat_Click);
@@ -160,7 +193,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(46, 116);
+            this.label6.Location = new System.Drawing.Point(15, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 12;
@@ -171,7 +204,7 @@
             this.cbMárka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMárka.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbMárka.FormattingEnabled = true;
-            this.cbMárka.Location = new System.Drawing.Point(49, 132);
+            this.cbMárka.Location = new System.Drawing.Point(18, 102);
             this.cbMárka.Name = "cbMárka";
             this.cbMárka.Size = new System.Drawing.Size(177, 25);
             this.cbMárka.TabIndex = 13;
