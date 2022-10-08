@@ -23,6 +23,10 @@ namespace CsordasBarna_BeadandoDolgozat
             string s = this.terméknév.PadRight(20) + this.termékkategória.PadRight(20) + (this.kiszerelés + " g").PadRight(15) + (this.ár + " Ft").PadRight(15) + this.dátum.PadRight(20);
             return s;
         }
+        public virtual string LegutobbiListabaKiiratas() {
+           string s = this.terméknév.PadRight(21)+this.termékkategória.PadRight(18)+this.dátum.PadRight(16);
+           return s; 
+        }
 
         public virtual void Courier(System.Windows.Forms.ListView lv, String s)
         {

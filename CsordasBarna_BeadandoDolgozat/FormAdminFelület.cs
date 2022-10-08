@@ -114,12 +114,14 @@ namespace CsordasBarna_BeadandoDolgozat
                         //sajat termek
                         Sajat t = new Sajat(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4]);
                         t.Courier(lvOutput, t.Térköz());
+                        t.Courier(lvLegutobbi, t.LegutobbiListabaKiiratas());
                     }
                     else
                     {
                         //beszerzett termek
                         Beszerzett t = new Beszerzett(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4], s[5]);
                         t.Courier(lvOutput, t.Térköz());
+                        t.Courier(lvLegutobbi, t.LegutobbiListabaKiiratas());
                     }
                 }
                 rd.Close();
@@ -235,6 +237,10 @@ namespace CsordasBarna_BeadandoDolgozat
             pnlNav.Left = button1.Left;
             button1.BackColor = Color.FromArgb(46, 51, 73);
 
+
+            //panelek megjelenítése
+            lvLegutobbi.Enabled = true;
+            lvLegutobbi.Visible = true;
             lvOutput.Visible = true;
             radioButton1.Visible = true;
             radioButton2.Visible = true;

@@ -148,8 +148,7 @@
             // 
             // btnMégsem
             // 
-            this.btnMégsem.Location = new System.Drawing.Point(387, 250);
-            this.btnMégsem.Visible = false;
+            
             // 
             // lblFelirat
             // 
@@ -202,7 +201,6 @@
             this.Controls.SetChildIndex(this.btnFelvitel, 0);
             this.Controls.SetChildIndex(this.numÁr, 0);
             this.Controls.SetChildIndex(this.numKiszerelés, 0);
-            this.Controls.SetChildIndex(this.btnMégsem, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cbMárka, 0);
             ((System.ComponentModel.ISupportInitialize)(this.numÁr)).EndInit();
