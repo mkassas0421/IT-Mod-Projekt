@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Collections;
-using System.Collections.Generic;
+
 
 namespace CsordasBarna_BeadandoDolgozat
 {
@@ -18,7 +18,7 @@ namespace CsordasBarna_BeadandoDolgozat
     {
         List<Sajat> lista = new List<Sajat>();
         static int beolvasottTermekekSzama;
-        static Stack<Sajat> termekek = new Stack<Sajat>();
+        static List<Sajat> beolvasottTermekLista = new List<Sajat>();
 
         private bool isCollapsed;
         private bool btnUjtermClicked = false;
@@ -110,9 +110,9 @@ namespace CsordasBarna_BeadandoDolgozat
 
             try
             {
-                //ez a két lista egyelőre nincs használatban csak elmentődnek külön-külön a két osztály beolvasott tagjai
-                List<Sajat> beolvasottSajatTermekLista = new List<Sajat>();
-                List<Beszerzett> beolvasottBeszerzettTermekLista = new List<Beszerzett>();
+                
+                
+                
 
                 Stack<Sajat> stack = new Stack<Sajat>();
                 beolvasottTermekekSzama = 0;
@@ -124,7 +124,7 @@ namespace CsordasBarna_BeadandoDolgozat
                     {
                         //sajat termek
                         Sajat t = new Sajat(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4]);
-                        beolvasottSajatTermekLista.Add(t);
+                        beolvasottTermekLista.Add(t);
                         stack.Push(t);
                         beolvasottTermekekSzama++;
                         t.Courier(lvOutput, t.Térköz());
@@ -134,7 +134,7 @@ namespace CsordasBarna_BeadandoDolgozat
                     {
                         //beszerzett termek
                         Beszerzett t = new Beszerzett(s[0], s[1], Convert.ToInt32(s[2]), Convert.ToInt32(s[3]), s[4], s[5]);
-                        beolvasottBeszerzettTermekLista.Add(t);
+                        beolvasottTermekLista.Add(t);
                         stack.Push(t);
                         beolvasottTermekekSzama++;
                         t.Courier(lvOutput, t.Térköz());
@@ -143,11 +143,12 @@ namespace CsordasBarna_BeadandoDolgozat
                 }
                 rd.Close();
                 //lvLegutobbi feltöltése Stackből
+                int a = beolvasottTermekLista.Count;
                 int n = stack.Count;
                 for (int i = 0; i < n; i++)
                 {
-                    Sajat obj = stack.Peek();
-                    termekek.Push(obj);
+                    //Sajat obj = stack.Peek();
+                    //termekek.Push(obj);
                     Sajat sajat = stack.Pop();
                     sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
                 }
@@ -620,38 +621,58 @@ namespace CsordasBarna_BeadandoDolgozat
 
                 case 0:
                     lvLegutobbi.Clear();
-                    for (int i = 0; i < beolvasottTermekekSzama; i++)
+                    //Stack feltöltése a termékekkel 
+                    Stack<Sajat> stack = new Stack<Sajat>();
+                    foreach (Sajat obj in beolvasottTermekLista)
                     {
-                        Sajat sajat = termekek.Pop();
-                        //termekek.Push(sajat);
-                        lvLegutobbi.Clear();
+                        stack.Push(obj);
+                    }
+                    for (int i = 0; i < beolvasottTermekekSzama; i++)
+                    {                                                                      
+                        Sajat sajat = stack.Pop();
                         sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
                     }
                     break;
                 case 1:
                     lvLegutobbi.Clear();
+                    //Stack feltöltése a termékekkel 
+                    Stack<Sajat> stack1 = new Stack<Sajat>();
+                    foreach (Sajat obj in beolvasottTermekLista)
+                    {
+                        stack1.Push(obj);
+                    }
                     for (int i = 0; i < 5; i++)
                     {
-                        Sajat sajat = termekek.Pop();
-                        //termekek.Push(sajat);                        
+                        Sajat sajat = stack1.Pop();
                         sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
                     }
                     break;
+
                 case 2:
                     lvLegutobbi.Clear();
+                    //Stack feltöltése a termékekkel 
+                    Stack<Sajat> stack2 = new Stack<Sajat>();
+                    foreach (Sajat obj in beolvasottTermekLista)
+                    {
+                        stack2.Push(obj);
+                    }
                     for (int i = 0; i < 10; i++)
                     {
-                        Sajat sajat = termekek.Pop();
-                        //termekek.Push(sajat);
+                        Sajat sajat = stack2.Pop();
                         sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
                     }
                     break;
                 case 3:
                     lvLegutobbi.Clear();
+                    //Stack feltöltése a termékekkel 
+                    Stack<Sajat> stack3 = new Stack<Sajat>();
+                    foreach (Sajat obj in beolvasottTermekLista)
+                    {
+                        stack3.Push(obj);
+                    }
                     for (int i = 0; i < 20; i++)
                     {
-                        Sajat sajat = termekek.Pop();
-                        //termekek.Push(sajat);
+                        Sajat sajat = stack3.Pop();
                         sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
                     }
                     break;

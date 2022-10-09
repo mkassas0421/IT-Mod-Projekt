@@ -7,3 +7,4 @@ Glutamin;Aminosavak;500;4700;2021. 05. 10.;MyProtein
 Multivitamin;Vitaminok;100;2800;2021. 05. 20.
 dSDAD;Testtömegnövelők;150;1000;2022. 09. 07.
 Creatin Monohydrate;Kreatin;500;5000;2022. 09. 17.
+Testosterol;Vitaminok;250;5500;2022. 10. 09.
