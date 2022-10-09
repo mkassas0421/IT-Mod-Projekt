@@ -33,7 +33,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlButtons = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUjidegentermek = new System.Windows.Forms.Button();
@@ -53,13 +53,16 @@
             this.lvLegutobbi = new System.Windows.Forms.ListView();
             this.lblLegutobbFelvitt = new System.Windows.Forms.Label();
             this.comboboxFelvitt = new System.Windows.Forms.ComboBox();
-            this.panel3.SuspendLayout();
+            this.lblSzures = new System.Windows.Forms.Label();
+            this.pnlTerméklista = new System.Windows.Forms.Panel();
+            this.pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlTerméklista.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvOutput
@@ -69,7 +72,7 @@
             this.lvOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.lvOutput.ForeColor = System.Drawing.Color.White;
             this.lvOutput.HideSelection = false;
-            this.lvOutput.Location = new System.Drawing.Point(228, 15);
+            this.lvOutput.Location = new System.Drawing.Point(0, 0);
             this.lvOutput.Margin = new System.Windows.Forms.Padding(4);
             this.lvOutput.Name = "lvOutput";
             this.lvOutput.Size = new System.Drawing.Size(773, 568);
@@ -85,12 +88,12 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(425, 589);
+            this.radioButton1.Location = new System.Drawing.Point(195, 574);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(109, 21);
+            this.radioButton1.Size = new System.Drawing.Size(123, 23);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Összes termék";
@@ -103,12 +106,12 @@
             this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(558, 589);
+            this.radioButton2.Location = new System.Drawing.Point(328, 574);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(102, 21);
+            this.radioButton2.Size = new System.Drawing.Size(116, 23);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.Text = "Saját termék";
             this.radioButton2.UseVisualStyleBackColor = false;
@@ -120,42 +123,42 @@
             this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(678, 589);
+            this.radioButton3.Location = new System.Drawing.Point(448, 574);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(131, 21);
+            this.radioButton3.Size = new System.Drawing.Size(147, 23);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.Text = "Beszerzett termék";
             this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.Visible = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // panel3
+            // pnlButtons
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel3.Controls.Add(this.pnlNav);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.btnUjidegentermek);
-            this.panel3.Controls.Add(this.btnUjtermek);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.btnKezdolap);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 641);
-            this.panel3.TabIndex = 11;
-            this.panel3.Click += new System.EventHandler(this.button2_Click);
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.pnlButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlButtons.Controls.Add(this.pnlNav);
+            this.pnlButtons.Controls.Add(this.pictureBox1);
+            this.pnlButtons.Controls.Add(this.btnUjidegentermek);
+            this.pnlButtons.Controls.Add(this.btnUjtermek);
+            this.pnlButtons.Controls.Add(this.button1);
+            this.pnlButtons.Controls.Add(this.pictureBox6);
+            this.pnlButtons.Controls.Add(this.pictureBox4);
+            this.pnlButtons.Controls.Add(this.pictureBox5);
+            this.pnlButtons.Controls.Add(this.button4);
+            this.pnlButtons.Controls.Add(this.btnKezdolap);
+            this.pnlButtons.Controls.Add(this.button3);
+            this.pnlButtons.Controls.Add(this.button2);
+            this.pnlButtons.Controls.Add(this.panel4);
+            this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlButtons.Location = new System.Drawing.Point(0, 0);
+            this.pnlButtons.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(220, 639);
+            this.pnlButtons.TabIndex = 11;
+            this.pnlButtons.Click += new System.EventHandler(this.button2_Click);
+            this.pnlButtons.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pnlNav
             // 
@@ -280,7 +283,7 @@
             this.button4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 589);
+            this.button4.Location = new System.Drawing.Point(0, 587);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(220, 52);
@@ -378,14 +381,14 @@
             this.lblFelhasznalo.Location = new System.Drawing.Point(85, 118);
             this.lblFelhasznalo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFelhasznalo.Name = "lblFelhasznalo";
-            this.lblFelhasznalo.Size = new System.Drawing.Size(47, 15);
+            this.lblFelhasznalo.Size = new System.Drawing.Size(54, 18);
             this.lblFelhasznalo.TabIndex = 1;
             this.lblFelhasznalo.Text = "Admin";
             this.lblFelhasznalo.Click += new System.EventHandler(this.lblFelhasznalo_Click);
             // 
             // pnlFelvitel
             // 
-            this.pnlFelvitel.Location = new System.Drawing.Point(1008, 15);
+            this.pnlFelvitel.Location = new System.Drawing.Point(784, 3);
             this.pnlFelvitel.Name = "pnlFelvitel";
             this.pnlFelvitel.Size = new System.Drawing.Size(503, 281);
             this.pnlFelvitel.TabIndex = 12;
@@ -397,7 +400,7 @@
             this.lvLegutobbi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lvLegutobbi.Enabled = false;
             this.lvLegutobbi.ForeColor = System.Drawing.Color.White;
-            this.lvLegutobbi.Location = new System.Drawing.Point(1008, 333);
+            this.lvLegutobbi.Location = new System.Drawing.Point(784, 318);
             this.lvLegutobbi.Name = "lvLegutobbi";
             this.lvLegutobbi.Size = new System.Drawing.Size(503, 250);
             this.lvLegutobbi.TabIndex = 0;
@@ -411,9 +414,9 @@
             this.lblLegutobbFelvitt.Enabled = false;
             this.lblLegutobbFelvitt.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblLegutobbFelvitt.ForeColor = System.Drawing.Color.White;
-            this.lblLegutobbFelvitt.Location = new System.Drawing.Point(1004, 309);
+            this.lblLegutobbFelvitt.Location = new System.Drawing.Point(780, 293);
             this.lblLegutobbFelvitt.Name = "lblLegutobbFelvitt";
-            this.lblLegutobbFelvitt.Size = new System.Drawing.Size(198, 20);
+            this.lblLegutobbFelvitt.Size = new System.Drawing.Size(248, 22);
             this.lblLegutobbFelvitt.TabIndex = 13;
             this.lblLegutobbFelvitt.Text = "Legutóbb felvitt termékek";
             this.lblLegutobbFelvitt.Visible = false;
@@ -421,6 +424,7 @@
             // comboboxFelvitt
             // 
             this.comboboxFelvitt.BackColor = System.Drawing.Color.White;
+            this.comboboxFelvitt.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboboxFelvitt.ForeColor = System.Drawing.Color.Black;
             this.comboboxFelvitt.FormattingEnabled = true;
             this.comboboxFelvitt.Items.AddRange(new object[] {
@@ -428,28 +432,49 @@
             "Legutóbbi 5 termék",
             "Legutóbbi 10 termék",
             "Legutóbbi 20 termék"});
-            this.comboboxFelvitt.Location = new System.Drawing.Point(1382, 305);
+            this.comboboxFelvitt.Location = new System.Drawing.Point(1158, 290);
             this.comboboxFelvitt.Name = "comboboxFelvitt";
             this.comboboxFelvitt.Size = new System.Drawing.Size(129, 25);
             this.comboboxFelvitt.TabIndex = 14;
+            this.comboboxFelvitt.Text = "       --összes--";
             this.comboboxFelvitt.Visible = false;
             this.comboboxFelvitt.SelectedIndexChanged += new System.EventHandler(this.comboboxFelvitt_SelectedIndexChanged);
+            // 
+            // lblSzures
+            // 
+            this.lblSzures.AutoSize = true;
+            this.lblSzures.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSzures.Location = new System.Drawing.Point(1101, 293);
+            this.lblSzures.Name = "lblSzures";
+            this.lblSzures.Size = new System.Drawing.Size(51, 19);
+            this.lblSzures.TabIndex = 15;
+            this.lblSzures.Text = "szűrés:";
+            this.lblSzures.Visible = false;
+            // 
+            // pnlTerméklista
+            // 
+            this.pnlTerméklista.Controls.Add(this.lblSzures);
+            this.pnlTerméklista.Controls.Add(this.lvOutput);
+            this.pnlTerméklista.Controls.Add(this.radioButton1);
+            this.pnlTerméklista.Controls.Add(this.radioButton2);
+            this.pnlTerméklista.Controls.Add(this.radioButton3);
+            this.pnlTerméklista.Controls.Add(this.pnlFelvitel);
+            this.pnlTerméklista.Controls.Add(this.lvLegutobbi);
+            this.pnlTerméklista.Controls.Add(this.lblLegutobbFelvitt);
+            this.pnlTerméklista.Controls.Add(this.comboboxFelvitt);
+            this.pnlTerméklista.Location = new System.Drawing.Point(231, 15);
+            this.pnlTerméklista.Name = "pnlTerméklista";
+            this.pnlTerméklista.Size = new System.Drawing.Size(1306, 614);
+            this.pnlTerméklista.TabIndex = 16;
             // 
             // FormAdminFelület
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1520, 641);
-            this.Controls.Add(this.comboboxFelvitt);
-            this.Controls.Add(this.lblLegutobbFelvitt);
-            this.Controls.Add(this.lvLegutobbi);
-            this.Controls.Add(this.pnlFelvitel);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.lvOutput);
+            this.ClientSize = new System.Drawing.Size(1542, 639);
+            this.Controls.Add(this.pnlTerméklista);
+            this.Controls.Add(this.pnlButtons);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -458,8 +483,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminFelület";
             this.Load += new System.EventHandler(this.FormAdminFelület_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlButtons.ResumeLayout(false);
+            this.pnlButtons.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -467,8 +492,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlTerméklista.ResumeLayout(false);
+            this.pnlTerméklista.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -477,7 +503,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Button btnKezdolap;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblFelhasznalo;
@@ -497,5 +523,7 @@
         private System.Windows.Forms.Label lblLegutobbFelvitt;
         public System.Windows.Forms.ListView lvLegutobbi;
         private System.Windows.Forms.ComboBox comboboxFelvitt;
+        private System.Windows.Forms.Label lblSzures;
+        private System.Windows.Forms.Panel pnlTerméklista;
     }
 }

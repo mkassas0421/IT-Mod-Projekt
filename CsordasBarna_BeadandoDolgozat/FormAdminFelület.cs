@@ -17,8 +17,8 @@ namespace CsordasBarna_BeadandoDolgozat
     public partial class FormAdminFelület : Form
     {
         List<Sajat> lista = new List<Sajat>();
-        static int beolvasottTermekekSzama;
-        static List<Sajat> beolvasottTermekLista = new List<Sajat>();
+        int beolvasottTermekekSzama;
+        List<Sajat> beolvasottTermekLista = new List<Sajat>();
 
         private bool isCollapsed;
         private bool btnUjtermClicked = false;
@@ -270,6 +270,7 @@ namespace CsordasBarna_BeadandoDolgozat
 
 
             //panelek megjelenítése
+            lblSzures.Visible = true;
             lvLegutobbi.Enabled = true;
             lvLegutobbi.Visible = true;
             lvOutput.Visible = true;
@@ -305,6 +306,8 @@ namespace CsordasBarna_BeadandoDolgozat
         private void btnKezdolap_Click(object sender, EventArgs e)
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
+            lblSzures.Visible = false;
+            comboboxFelvitt.Visible = false;
             pnlFelvitel.Visible = false;
             lblLegutobbFelvitt.Visible = false;
             lvLegutobbi.Visible = false;
@@ -344,6 +347,8 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button2_Click(object sender, EventArgs e)
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
+            lblSzures.Visible = false;
+            comboboxFelvitt.Visible = false;
             pnlFelvitel.Visible = false;
             lblLegutobbFelvitt.Visible = false;
             lvLegutobbi.Visible = false;
@@ -406,6 +411,8 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button3_Click(object sender, EventArgs e)
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
+            lblSzures.Visible = false;
+            comboboxFelvitt.Visible = false;
             pnlFelvitel.Visible = false;
             lvLegutobbi.Visible = false;
             lblLegutobbFelvitt.Visible = false;
@@ -438,6 +445,8 @@ namespace CsordasBarna_BeadandoDolgozat
         private void button4_Click(object sender, EventArgs e)
         {
             //Termékfelvitelpanelen lévő dolgok eltűntetése
+            lblSzures.Visible = false;
+            comboboxFelvitt.Visible = false;
             pnlFelvitel.Visible = false;
             lblLegutobbFelvitt.Visible = false;
             lvLegutobbi.Visible = false;
@@ -641,10 +650,16 @@ namespace CsordasBarna_BeadandoDolgozat
                     {
                         stack1.Push(obj);
                     }
-                    for (int i = 0; i < 5; i++)
-                    {
-                        Sajat sajat = stack1.Pop();
-                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    if (beolvasottTermekekSzama >= 5) {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Sajat sajat = stack1.Pop();
+                            sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Az összes felvitt elem száma nem éri el a 5-öt!\nFelvitt elemek száma: " + beolvasottTermekekSzama, "Figyelem!");
+                        comboboxFelvitt.SelectedIndex = 0;
                     }
                     break;
 
@@ -656,10 +671,16 @@ namespace CsordasBarna_BeadandoDolgozat
                     {
                         stack2.Push(obj);
                     }
-                    for (int i = 0; i < 10; i++)
-                    {
-                        Sajat sajat = stack2.Pop();
-                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                    if (beolvasottTermekekSzama >= 10) {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            Sajat sajat = stack2.Pop();
+                            sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Az összes felvitt elem száma nem éri el a 10-et!\nFelvitt elemek száma: " + beolvasottTermekekSzama, "Figyelem!");
+                        comboboxFelvitt.SelectedIndex = 0;
                     }
                     break;
                 case 3:
@@ -670,11 +691,19 @@ namespace CsordasBarna_BeadandoDolgozat
                     {
                         stack3.Push(obj);
                     }
-                    for (int i = 0; i < 20; i++)
+                    if (beolvasottTermekekSzama >= 20)
                     {
-                        Sajat sajat = stack3.Pop();
-                        sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                        for (int i = 0; i < 20; i++)
+                        {
+                            Sajat sajat = stack3.Pop();
+                            sajat.Courier(lvLegutobbi, sajat.LegutobbiListabaKiiratas(sajat));
+                        }
                     }
+                    else {
+                        MessageBox.Show("Az összes felvitt elem száma nem éri el a 20-at!\nFelvitt elemek száma: " + beolvasottTermekekSzama,"Figyelem!");
+                        comboboxFelvitt.SelectedIndex = 0;
+                    }
+                    
                     break;
             }
         }
