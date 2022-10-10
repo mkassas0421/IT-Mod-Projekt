@@ -109,6 +109,7 @@
             // cbKategória
             // 
             this.cbKategória.BackColor = System.Drawing.Color.White;
+            this.cbKategória.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKategória.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbKategória.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbKategória.ForeColor = System.Drawing.Color.Black;
@@ -117,7 +118,6 @@
             this.cbKategória.Name = "cbKategória";
             this.cbKategória.Size = new System.Drawing.Size(177, 25);
             this.cbKategória.TabIndex = 6;
-            this.cbKategória.Text = "              -- Válasszon --";
             this.cbKategória.SelectedIndexChanged += new System.EventHandler(this.cbKategória_SelectedIndexChanged);
             // 
             // dtpDátum
@@ -134,7 +134,6 @@
             // btnFelvitel
             // 
             this.btnFelvitel.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnFelvitel.Enabled = false;
             this.btnFelvitel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnFelvitel.ForeColor = System.Drawing.Color.Black;
             this.btnFelvitel.Location = new System.Drawing.Point(307, 153);

@@ -25,15 +25,12 @@ namespace CsordasBarna_BeadandoDolgozat
             return s;
         }
 
-        //public void LegutobbiLista(Stack<Sajat>stack,System.Windows.Forms.ListView lv,int n) {
-        //    int index = 0;
-        //    while (index<n)
-        //    {
-        //        Sajat obj = stack.Pop();
-        //        Courier(lv, LegutobbiListabaKiiratas(obj));
-        //        index++;
-        //    }
-        //}
+        public virtual string Térköz(Sajat obj)
+        {
+            string s = obj.Terméknév.PadRight(20) + obj.Termékkategória.PadRight(20) + (obj.Kiszerelés + " g").PadRight(15) + (obj.Ár + " Ft").PadRight(15) + obj.Dátum.PadRight(20);
+            return s;
+        }
+
         public virtual string LegutobbiListabaKiiratas() {
             
             string s = this.terméknév.PadRight(21)+this.termékkategória.PadRight(18)+this.dátum.PadRight(16);

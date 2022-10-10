@@ -144,3 +144,8 @@ C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.Properties.Resources.resources
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.csproj.GenerateResource.Cache
 C:\Users\barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormCRMFelelos.resources
+C:\Users\Barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CircularProgressBar.dll
+C:\Users\Barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\WinFormAnimation.dll
+C:\Users\Barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CircularProgressBar.xml
+C:\Users\Barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\WinFormAnimation.xml
+C:\Users\Barna\Documents\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormKezdolap.resources

@@ -19,6 +19,10 @@ namespace CsordasBarna_BeadandoDolgozat
             return base.Térköz()+this.márka.PadRight(15);
         }
 
+        public string Térköz(Beszerzett obj)
+        {
+            return base.Térköz(obj)+obj.Márka.PadRight(15);
+        }
         public override string LegutobbiListabaKiiratas()
         {
             return base.LegutobbiListabaKiiratas()+this.márka.PadRight(15);

@@ -30,6 +30,7 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.cbMárka = new System.Windows.Forms.ComboBox();
+            this.btnFelvitelBeszerzett = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numÁr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numKiszerelés)).BeginInit();
             this.SuspendLayout();
@@ -54,13 +55,33 @@
             // 
             this.label5.Location = new System.Drawing.Point(202, 86);
             // 
-            // tbTerméknév
-            // 
-            this.tbTerméknév.Location = new System.Drawing.Point(18, 59);
-            // 
             // cbKategória
             // 
             this.cbKategória.Items.AddRange(new object[] {
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
+            "PreWorkout",
             "Vitaminok",
             "Fehérjék",
             "Testtömegnövelők",
@@ -163,6 +184,7 @@
             "Aminosavak",
             "Kreatin"});
             this.cbKategória.Location = new System.Drawing.Point(18, 152);
+            this.cbKategória.SelectedIndexChanged += new System.EventHandler(this.cbKategória_SelectedIndexChanged);
             // 
             // dtpDátum
             // 
@@ -171,7 +193,8 @@
             // 
             // btnFelvitel
             // 
-            this.btnFelvitel.Location = new System.Drawing.Point(328, 179);
+            this.btnFelvitel.Location = new System.Drawing.Point(329, 246);
+            this.btnFelvitel.Visible = false;
             this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
             // numÁr
@@ -184,7 +207,6 @@
             // 
             // lblFelirat
             // 
-            this.lblFelirat.Location = new System.Drawing.Point(14, 8);
             this.lblFelirat.Size = new System.Drawing.Size(245, 22);
             this.lblFelirat.Text = "Beszerzett termék felvitele";
             this.lblFelirat.Click += new System.EventHandler(this.lblFelirat_Click);
@@ -201,6 +223,7 @@
             // 
             // cbMárka
             // 
+            this.cbMárka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMárka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbMárka.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbMárka.FormattingEnabled = true;
@@ -208,14 +231,25 @@
             this.cbMárka.Name = "cbMárka";
             this.cbMárka.Size = new System.Drawing.Size(177, 25);
             this.cbMárka.TabIndex = 13;
-            this.cbMárka.Text = "              -- Válasszon --";
             this.cbMárka.SelectedIndexChanged += new System.EventHandler(this.cbMárka_SelectedIndexChanged);
+            // 
+            // btnFelvitelBeszerzett
+            // 
+            this.btnFelvitelBeszerzett.ForeColor = System.Drawing.Color.Black;
+            this.btnFelvitelBeszerzett.Location = new System.Drawing.Point(328, 183);
+            this.btnFelvitelBeszerzett.Name = "btnFelvitelBeszerzett";
+            this.btnFelvitelBeszerzett.Size = new System.Drawing.Size(99, 23);
+            this.btnFelvitelBeszerzett.TabIndex = 14;
+            this.btnFelvitelBeszerzett.Text = "Felvitel";
+            this.btnFelvitelBeszerzett.UseVisualStyleBackColor = true;
+            this.btnFelvitelBeszerzett.Click += new System.EventHandler(this.btnFelvitelBeszerzett_Click);
             // 
             // FormBeszerzettTermekBevitel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 281);
+            this.Controls.Add(this.btnFelvitelBeszerzett);
             this.Controls.Add(this.cbMárka);
             this.Controls.Add(this.label6);
             this.Location = new System.Drawing.Point(0, 0);
@@ -236,6 +270,7 @@
             this.Controls.SetChildIndex(this.numKiszerelés, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cbMárka, 0);
+            this.Controls.SetChildIndex(this.btnFelvitelBeszerzett, 0);
             ((System.ComponentModel.ISupportInitialize)(this.numÁr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numKiszerelés)).EndInit();
             this.ResumeLayout(false);
@@ -247,5 +282,6 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbMárka;
+        private System.Windows.Forms.Button btnFelvitelBeszerzett;
     }
 }
