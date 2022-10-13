@@ -166,6 +166,9 @@
     <EmbeddedResource Include="FormSajatTermekBevitel.resx">
       <DependentUpon>FormSajatTermekBevitel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTermekFelelos.resx">
+      <DependentUpon>FormTermekFelelos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

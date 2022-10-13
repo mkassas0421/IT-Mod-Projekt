@@ -173,3 +173,4 @@ C:\Users\mkass\Documents\Beadando\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\b
 C:\Users\mkass\Documents\Beadando\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\CircularProgressBar.xml
 C:\Users\mkass\Documents\Beadando\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\bin\Debug\WinFormAnimation.xml
 C:\Users\mkass\Documents\Beadando\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.csproj.CopyComplete
+C:\Users\mkass\Documents\Beadando\IT-Mod-Projekt\CsordasBarna_BeadandoDolgozat\obj\Debug\CsordasBarna_BeadandoDolgozat.FormTermekFelelos.resources

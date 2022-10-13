@@ -24,14 +24,30 @@ namespace CsordasBarna_BeadandoDolgozat
             InitializeComponent();
             this.termekek = lista;
         }
+        private List<string> importMarka()
+        {
 
+            List<string> allLinesText = File.ReadAllLines("marka.txt").ToList();
+            Console.WriteLine(allLinesText.Count());
+            return allLinesText;
+        }
         private void FormBeszerzettTermekBevitel_Load(object sender, EventArgs e)
         {
             kategoriaIndexChanged = false;
             string[] s = Enum.GetNames(typeof(Márka));
-            foreach (string item in s)
+            if (importMarka().Count()==0)
             {
-                cbMárka.Items.Add(item);
+                foreach (string item in s)
+                {
+                    cbMárka.Items.Add(item);
+                }
+            }
+            else
+            {
+                foreach (string item in importMarka())
+                {
+                    cbMárka.Items.Add(item);
+                }
             }
             if (cbKategória.Items.Count!=5)
             {
@@ -42,11 +58,6 @@ namespace CsordasBarna_BeadandoDolgozat
                     cbKategória.Items.Add(item);
                 }
             }
-        }
-
-        private void btnFelvitel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cbMárka_SelectedIndexChanged(object sender, EventArgs e)

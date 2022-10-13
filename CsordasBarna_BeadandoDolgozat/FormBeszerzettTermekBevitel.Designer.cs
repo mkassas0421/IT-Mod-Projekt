@@ -153,6 +153,12 @@
             "Testtömegnövelők",
             "Aminosavak",
             "Kreatin",
+            "PreWorkout",
+            "Vitaminok",
+            "Fehérjék",
+            "Testtömegnövelők",
+            "Aminosavak",
+            "Kreatin",
             "Vitaminok",
             "Fehérjék",
             "Testtömegnövelők",
@@ -195,7 +201,6 @@
             // 
             this.btnFelvitel.Location = new System.Drawing.Point(329, 246);
             this.btnFelvitel.Visible = false;
-            this.btnFelvitel.Click += new System.EventHandler(this.btnFelvitel_Click);
             // 
             // numÁr
             // 
